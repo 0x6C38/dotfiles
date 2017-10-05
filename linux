@@ -2,16 +2,44 @@
 ## General
 - git
 - sbt
-- htop
-- emacs
+- htop / gtop
+- zsh
+- emacs + spacemacs
 - vim
-- ranger
+- ranger + w3m + trash-cli (sudo easy_install trash-cli)
+- peek (yaourt)
+- keepass + xdotools
+
+## Japanese Input
+- fcitx-im (all)
+- fcitx-mozc
+
+Must also add and configure input methods in fcitx-configtool (add mozc) and also shortcuts. May be necssary to mess with the composition mode. May also be necessary to add the following to the .xinitrc file
+
+     export GTK_IM_MODULE=fcitx
+     export QT_IM_MODULE=fcitx
+     export XMODIFIERS="@im=fcitx"
+
 ## Gnome
 - tilix
+- dconf (to back up configurations)
+
 ### Themes
-- Paper
-- Adapta
-- United
+- Paper ()
+- Adapta ()
+- United ()
+
 ## i3 related
 - scrot: For taking screenshots
 - rofi: Alternative to dmenu
+- i3lock-fancy
+- imagemagick: required for i3lock-fancyxev
+- python-pywal (yaourt)(former wal)
+- compton
+- transmission-cli: (cli torrent client)
+
+# Media drive mounting
+Look for the drive's UUID via lsblk and then mount the drive to some location (which must exist) and then create an entry in the /etc/fstab file using noatime. This line should work by replacing sdb1 with the name of the drive and /run/media/dsalvio/Media with the desired mount point.
+
+    echo "UUID=$(lsblk -no UUID /dev/sdb1) /run/media/dsalvio/Media $(lsblk -no FSTYPE /dev/sdb1) defaults,noatime 0 2" >> /etc/fstab 
+
