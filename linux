@@ -25,9 +25,13 @@ Must also add and configure input methods in fcitx-configtool (add mozc) and als
 - dconf (to back up configurations)
 
 ### Themes
-- Paper ()
-- Adapta ()
-- United ()
+- [Paper](https://snwh.org/paper/download)
+- [Adapta](https://github.com/adapta-project/adapta-gtk-theme#installatiohttps://github.com/godlyranchdressing/United-GNOMEn-from-packages)
+- [United](https://github.com/godlyranchdressing/United-GNOME)
+- [Ant](https://www.opendesktop.org/s/Gnome/p/1099856/)
+- [Numix]()
+- [Flat-Plat](https://www.opendesktop.org/s/Gnome/p/1084960/)
+- [Arc](https://github.com/horst3180/Arc-theme#installation)
 
 ## i3 related
 - scrot: For taking screenshots
@@ -37,6 +41,25 @@ Must also add and configure input methods in fcitx-configtool (add mozc) and als
 - python-pywal (yaourt)(former wal)
 - compton
 - transmission-cli: (cli torrent client)
+- ttf-font-awesome (font for displaying symbols)
+
+# KDE
+## Add shortcut to switch between desktops "there is no shortcut to change desktop"
+You can add it. Global shortcuts -> System Settings Module -> different kinds of switching Or left click on a Pager -> Configure Desktops -> Switchings and choose it there. 
+
+
+## Add a shortcut to drag windows to another desktop"no shortcut to drag your windows to another desktop 
+You can add it. Global shortcuts -> System Settings Module -> Window to Desktop "alt tab doesn't include windows from every desktop" You can change it. Task Switcher -> Filter windows by and uncheck Virtual desktops 
+
+## "When you type in the menu and search for an application it opens up a new window by default and if you configure it to open only one instance it does so, but only if the other instances are on the same desktop" 
+
+Isn't it per program dependant? Tried Smplayer(1 instance mode enabled), opened in desktop 1 tried to open in desktop 2 KDE switched to desktop 1 to already opened Smplayer. 
+
+To change application launcher type:
+- unlock widgets ->  right click logo ->  alternatives
+
+## Num-pad is off when the computer starts
+Something [here](https://forum.manjaro.org/t/solved-how-to-turn-on-numlock-on-boot-on-plasma/8301/2) solved the issue.
 
 # Media drive mounting
 Look for the drive's UUID via lsblk and then mount the drive to some location (which must exist) and then create an entry in the /etc/fstab file using noatime. This line should work by replacing sdb1 with the name of the drive and /run/media/dsalvio/Media with the desired mount point.
