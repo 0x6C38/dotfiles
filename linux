@@ -4,7 +4,7 @@
 - sbt
 - htop / gtop
 - zsh
-- emacs + spacemacs
+- emacs + spacemacs + adobe-source-code-pro-fonts
 - vim
 - ranger + w3m + trash-cli (sudo easy_install trash-cli)
 - peek (yaourt)
