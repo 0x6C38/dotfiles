@@ -1,1 +1,1 @@
-/home/dsalvio/.sbt/0.13/plugins/plugins.sbt
+addSbtPlugin("org.ensime" % "sbt-ensime" % "1.12.14")
