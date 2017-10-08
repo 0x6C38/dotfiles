@@ -7,9 +7,16 @@
 - emacs + spacemacs + adobe-source-code-pro-fonts
 - vim
 - ranger + w3m + trash-cli (sudo easy_install trash-cli)
-- peek (yaourt)
 - keepass + xdotools
 - youtube-dl
+
+### Optional
+- peek (record screen and make gif)
+- ttyrec (recording terminal actions and playing them back)
+
+## Fonts
+- powerline fonts (https://github.com/powerline/fonts)
+- ttf-font-awesome
 
 ## Japanese Input
 - fcitx-im (all)

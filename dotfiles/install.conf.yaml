@@ -23,3 +23,36 @@
     
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
+  - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
+  - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
+  - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
+    #- [yaourt   -S gtop                              , Making sure gtop is installed]
+  - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
+    
+  - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
+    #- [sudo rm -r ~/.emacs.d                ,  Deleting vanilla emacs config] 
+    #- [git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d, Making sure spacemacs is installed]
+  - [sudo pacman -S adobe-source-code-pro-fonts --needed, Making sure adobe fonts is installed]
+
+  - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
+  - [sudo pacman -S w3m           --needed --noconfirm, Making sure w3m (ranger dependency) is installed]
+  - [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed]
+
+  - [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
+    #- [yaourt   -S xdotools                          , Making sure xdotools(keepass dependency) is installed]
+    
+  - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
+
+    #- [sudo pacman -S fcitx-im   --needed, Making sure fcitx-im is installed]
+    #- [sudo pacman -S fcitx-mozc --needed, Making sure fcitx-mozc is installed]
+
+  - [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
+  - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
+  - [sudo pacman -S transmission-cli  --needed --noconfirm, Making sure transmission is installed]
+
+    #- [git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/, Cloning powerline fonts.]
+    #- [~/fonts/install.sh, Installing powerline fonts.]
+    #- [rm -rf fonts, Cleaning up powerline fonts install.]
+
+    #- [yaourt -S ttf-font-awesome, Installing font awesome.]
