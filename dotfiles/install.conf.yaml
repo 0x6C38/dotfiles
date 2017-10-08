@@ -9,11 +9,13 @@
     ~/.dotfiles: ''
     ~/.config/compton.conf: compton.conf
     ~/.i3/config: config
+    ~/.gitconfig: .gitconfig
     ~/.i3/i3blocks.conf: i3blocks.conf
     ~/.emacs.d/init.el: init.el
     ~/.sbt/1.0/plugins/plugins.sbt: plugins.sbt
     ~/.config/ranger/rc.conf: rc.conf
     ~/.config/ranger/rifle.conf: rifle.conf
+    ~/.ssh: .ssh
     ~/.spacemacs: .spacemacs
     ~/.vimrc: .vimrc
     ~/.Xresources: .Xresources
