@@ -42,6 +42,7 @@ Must also add and configure input methods in fcitx-configtool (add mozc) and als
 - [Arc](https://github.com/horst3180/Arc-theme#installation)
 
 ## i3 related
+- feh: Image viewer + sets wallpapers on wm's
 - scrot: For taking screenshots
 - rofi: Alternative to dmenu
 - i3lock-fancy
