@@ -1,0 +1,13 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+JDK_HOME="/usr/lib/jvm/java-8-openjdk"
+# SPARK_HOME ="/opt/spark-2.1.0-bin-hadoop2.7/bin"
+
+export JAVA_HOME
+
+LC_ALL=en_GB.UTF-8
+LANG=en_GB.UTF-8
