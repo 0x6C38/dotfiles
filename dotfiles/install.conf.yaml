@@ -1,3 +1,4 @@
+# This file needs to be run once as admin and once as regular user.
 - defaults:
     link:
       relink: true
@@ -13,6 +14,7 @@
     ~/.gitconfig: .gitconfig
     ~/.i3/i3blocks.conf: i3blocks.conf
     ~/.emacs.d/init.el: init.el
+    /etc/locale.conf: locale.conf
     ~/.sbt/1.0/plugins/plugins.sbt: plugins.sbt
     /etc/profile: profile
     ~/.config/ranger/rc.conf: rc.conf
