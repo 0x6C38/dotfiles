@@ -1,0 +1,163 @@
+# Pre-Install
+## Set temporary keymap for keyboard and check internet connection
+loadkeys la-latin1
+ping -c 3 google.com
+dhcpcd??
+
+## Disk partitioning
+### Check which drive is which
+fdisk -l
+
+### Create partition table
+cfdisk /dev/sda (filesystem + swap)
+
+### Format file system drive & mount
+mkfs.ext4 /dev/sda1 (filesystem)
+mount /dev/sda1 /mnt
+
+### Format swap drive and set as swap
+mkswap /dev/sda2
+swapon /dev/sda2
+
+# Instalation
+## Install arch itself
+pacstrap /mnt base base-devel
+arch-chroot /mnt
+passwd
+
+## Set persistent locale (language)
+nano /etc/locale.gen
+locale-gen
+
+## Set persistent keyboard map layout
+echo "KEYMAP=la-latin1" > /etc/vconsole.conf
+sudo nano /etc/X11/xorg.conf.d/10-keyboard.conf
+
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout"  "latam"
+        Option "XkbModel"   "pc104"
+        Option "XkbVariant" "deadtilde,dvorak"
+        Option "XkbOptions" "grp:alt_shift_toggle"
+EndSection
+
+
+## Set persistent time configuration
+rm /etc/localtime
+ln -s /usr/share/zoneInfo/America... /etc/localtime
+
+## Set host name for computer
+echo nombreMaquina > /etc/hostname
+
+## Install bootloader in order to be able to start up
+pacman -S grub-bios -y
+grub-install /dev/sda
+
+## Build the linux kernell
+mkinitcpio -p linux
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+genfstab /mnt >> /mnt/etc/fstab
+
+## Reboot the system
+umount /mnt
+reboot
+
+# Post-Install
+## Configure pacman to not exclude 32 bit packages
+nano /etc/pacman.conf
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+SigLevel = PackageRequired TrustedOnly
+
+## Add a user
+useradd -m -g users -s /bin/bash nuevoUsuario (m crear home dir, g agregar al grupo de usuarios)
+passwd nuevoUsuario
+passwd root
+
+## Configure sudo access
+pacman -S sudo
+nano /etc/sudoers
+Uncomment %wheel ALL=(ALL) ALL
+gpasswd -a nuevoUsuario wheel
+
+## Install 
+sudo pacman -S ntp dbus avahi cups
+systemctl enable ntpd
+systemctl enable avahai-daemon
+systemctl enable org.cups.cupsd.service
+
+## Configure automatic network time update service
+nano /etc/ntp.conf
+??
+hwclock
+
+## i3wm setup
+pacman -S xorg-server xorg-xinit xorg-apps (xorg-apps replaces xorg-server-utils and xorg-utils)
+
+### Install apps
+pacman -S xorg-twm xorg-xclock xterm dmenu
+
+### Install drivers
+pacman xorg-drivers
+
+### Configure xorg to use i3
+su leuser
+cd
+nano .xinitrc
+"exec i3"
+
+### Install i3
+sudo pacman -S i3
+
+### Start i3
+exit
+exit
+login non admin
+startx
+configure i3 to open a different terminal
+
+# Sources
+
+    https://www.youtube.com/watch?v=lizdpoZj_vU
+    https://www.youtube.com/watch?v=GCUmGtCYPWM
+
+    https://www.youtube.com/watch?v=Wqh9AQt3nho
+    https://www.youtube.com/watch?v=P4IV5BYPiPs
+    https://www.youtube.com/watch?v=5Idf4lFsmx0
+
+
+# Messy notes
+----
+timedatectl set-timezone America/Argentina/Buenos_Aires (setea la timezone correcta)
+timedatectl set-ntp true
+timedatectl status (muestra el estado)
+
+genfstab -U -p /mnt >> /mnt/etc/fstab (genera un archivo con la informacion de las particiones)
+
+pacman -S grub-bios linux-headers linux-lts linux-lts-headers -y
+vi /etc/locale.gen (descomentar el idioma ? buscado -sacar el #-)
+locale-gen (genera la configuracion en base al archivo)
+# ln -s /usr/share/zoneinfo/America/ Crear el archivo del local si es que no esta
+hwclock --systohc --utc (sincroniza el reloj)
+
+grub-install --target=i386-pc --recheck /dev/sda (instala el bootloader)
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
+umount /mnt
+reboot (existing OS)
+
+--Post-install
+localectl set-locale LANG="en_GB.UTF-8" (setea el locale de nuevo para algunas aplicaciones que no funcionan correctamente)
+
+pacman -S xf86-input-libinput xorg-server xorg-xinit xorg-apps mesa (paquetes para instalar una interface grafica, puede haber errores de mirros, simplemente esperar hasta que encuentre alguno que funcione)
+
+pacman -S -xf86-video-amdgpu (driver amd, sin el primer -?) tambien (generico) -S xf86-video-vesa
+pacman -S gdm (display manager para gnome)
+pacman -S gnome gnome-extra (paquetes de paquetes de gnome, necesarios salvo el extra, pero recomendado igualmente)
+systemctl enable gdm (hace que el servicio grafico empiece automaticamente)
+
+Falta:
+- Hacer permanente el cambio de hora
