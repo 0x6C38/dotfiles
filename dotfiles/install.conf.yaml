@@ -10,6 +10,7 @@
   - [git submodule update --init --recursive, Installing submodules]
   - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
+  - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
   - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
   - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
   - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
