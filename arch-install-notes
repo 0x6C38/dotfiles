@@ -86,7 +86,7 @@ gpasswd -a nuevoUsuario wheel
 ## Install 
 sudo pacman -S ntp dbus avahi cups
 systemctl enable ntpd
-systemctl enable avahai-daemon
+systemctl enable avahi-daemon
 systemctl enable org.cups.cupsd.service
 
 ## Configure automatic network time update service
@@ -94,14 +94,29 @@ nano /etc/ntp.conf
 ??
 hwclock
 
+## Enable yaourt
+### Edit package manager file
+nano /etc/pacman.conf
+
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+
+### Install and sync yaourt itself
+sudo pacman -Syu yaourt
+yaourt -Syu
+
 ## i3wm setup
 pacman -S xorg-server xorg-xinit xorg-apps (xorg-apps replaces xorg-server-utils and xorg-utils)
 
 ### Install apps
-pacman -S xorg-twm xorg-xclock xterm dmenu
+pacman -S xorg-twm xorg-xclock xterm dmenu i3status i3blocks
 
 ### Install drivers
 pacman xorg-drivers
+
+### Install i3 itself
+yaourt -S i3-gaps
 
 ### Configure xorg to use i3
 su leuser
@@ -120,6 +135,7 @@ startx
 configure i3 to open a different terminal
 
 # Sources
+    https://wiki.archlinux.org/index.php/installation_guide
 
     https://www.youtube.com/watch?v=lizdpoZj_vU
     https://www.youtube.com/watch?v=GCUmGtCYPWM
@@ -159,5 +175,7 @@ pacman -S gdm (display manager para gnome)
 pacman -S gnome gnome-extra (paquetes de paquetes de gnome, necesarios salvo el extra, pero recomendado igualmente)
 systemctl enable gdm (hace que el servicio grafico empiece automaticamente)
 
-Falta:
-- Hacer permanente el cambio de hora
+Missing:
+- Make ntp execute as a service
+- OS prober?
+- Mount other drives
