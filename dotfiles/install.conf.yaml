@@ -84,5 +84,6 @@
     ~/.spacemacs: .spacemacs
     ~/.vimrc: .vimrc
     ~/.Xresources: .Xresources
+    ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
     

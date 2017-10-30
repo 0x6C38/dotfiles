@@ -51,7 +51,8 @@ ln -s /usr/share/zoneInfo/America... /etc/localtime
 echo nombreMaquina > /etc/hostname
 
 ## Install bootloader in order to be able to start up
-pacman -S grub-bios -y
+pacman -S grub-bios os-prober
+os-prober (should detect other operating systems)
 grub-install /dev/sda
 
 ## Build the linux kernell
