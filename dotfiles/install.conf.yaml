@@ -3,41 +3,53 @@
     link:
       relink: true
       force: true
+      create: true
 
 - clean: ['~']
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
-  - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
-  - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
-  - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
   - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
   - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
     #- [yaourt   -S gtop                              , Making sure gtop is installed]
-    
+  - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
+  - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
+
+    # Zsh related
+  - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
+    #- [sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)", Curling oh-my-zsh]
+    #- [sudo cp -r /root/.oh-my-zsh ~/, Copying oh-my-zsh from root to current user folder]
+    #- [sudo git clone https://github.com/geometry-zsh/geometry $HOME/.oh-my-zsh/custom/themes, Cloning oh-my-zsh's geometry theme.]
+
+    # Development related
+  - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
+  - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
+  - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
+
     # Emacs related
   - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
     #- [sudo rm -r ~/.emacs.d                ,  Deleting vanilla emacs config] 
-    #- [git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d, Making sure spacemacs is installed]
+    #- [git clone "https://github.com/syl20bnr/spacemacs" "~/.emacs.d", Making sure spacemacs is installed]
   - [sudo pacman -S adobe-source-code-pro-fonts --needed, Making sure adobe fonts is installed]
 
     # Ranger related
   - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
   - [sudo pacman -S w3m           --needed --noconfirm, Making sure w3m (ranger dependency) is installed]
-  - [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed]
+    #- [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed] #Either conflict or corrupt package
 
     # Keepass related
   - [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
-    #- [yaourt   -S xdotools                          , Making sure xdotools(keepass dependency) is installed]
+    #- [yaourt      -S xdotools      --needed --noconfirm, Making sure xdotools(keepass dependency) is installed]
     
   - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
 
     # Language related
-    #- [sudo pacman -S fcitx-im   --needed, Making sure fcitx-im is installed]
-    #- [sudo pacman -S fcitx-mozc --needed, Making sure fcitx-mozc is installed]
+  - [sudo pacman -S fcitx-im    --needed --noconfirm, Making sure fcitx-im is installed]
+  - [sudo pacman -S fcitx-mozc  --needed --noconfirm, Making sure fcitx-mozc is installed]
 
     # i3 related
+    #- [yaourt -S neofetch                            , Making sure neofetch is installed]
   - [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
   - [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
   - [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
@@ -45,13 +57,15 @@
     #- [yaourt      -S python-pywal                      , Making sure pywal is installed]
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
   - [sudo pacman -S transmission-cli  --needed --noconfirm, Making sure transmission is installed]
+  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure OS-prober is installed]
+  
 
     # Fonts
+    #- [yaourt -S ttf-font-awesome, Installing font awesome.]
     #- [git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/, Cloning powerline fonts.]
     #- [~/fonts/install.sh, Installing powerline fonts.]
     #- [rm -rf fonts, Cleaning up powerline fonts install.]
 
-    #- [yaourt -S ttf-font-awesome, Installing font awesome.]
 
 - link:
     ~/.dotfiles: ''
@@ -66,7 +80,7 @@
     #/etc/profile: profile
     ~/.config/ranger/rc.conf: rc.conf
     ~/.config/ranger/rifle.conf: rifle.conf
-    ~/.ssh: .ssh
+    #~/.ssh: .ssh
     ~/.spacemacs: .spacemacs
     ~/.vimrc: .vimrc
     ~/.Xresources: .Xresources
