@@ -7,7 +7,7 @@
 - emacs + spacemacs + adobe-source-code-pro-fonts
 - vim
 - ranger + w3m + trash-cli (sudo easy_install trash-cli)
-- keepass + xdotools
+- keepass/keepassxc + xdotools
 - youtube-dl
 
 ### Optional
@@ -75,3 +75,6 @@ Look for the drive's UUID via lsblk and then mount the drive to some location (w
 
     echo "UUID=$(lsblk -no UUID /dev/sdb1) /run/media/dsalvio/Media $(lsblk -no FSTYPE /dev/sdb1) defaults,noatime 0 2" >> /etc/fstab 
 
+By default root may take ownership of the mounted folder so it may be necessary to take measures to provide other users with access. This may be done via configuration in the fstab file or by taking ownership of the mounted drive:
+
+    sudo chown -R myUserName: /media/MD

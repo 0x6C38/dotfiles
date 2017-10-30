@@ -26,6 +26,8 @@
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
+  - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
+    #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
 
     # Emacs related
   - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
@@ -41,12 +43,14 @@
     # Keepass related
   - [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
     #- [yaourt      -S xdotools      --needed --noconfirm, Making sure xdotools(keepass dependency) is installed]
+  - [sudo pacman -S keepassxc     --needed --noconfirm, Making sure keepassxc is installed]
     
   - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
 
     # Language related
-  - [sudo pacman -S fcitx-im    --needed --noconfirm, Making sure fcitx-im is installed]
-  - [sudo pacman -S fcitx-mozc  --needed --noconfirm, Making sure fcitx-mozc is installed]
+  - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
+  - [sudo pacman -S fcitx-mozc           --needed --noconfirm, Making sure fcitx-mozc is installed]
+  - [sudo pacman -S fcitx-configtool     --needed --noconfirm, Making sure fcitx-configtool is installed]
 
     # i3 related
     #- [yaourt -S neofetch                            , Making sure neofetch is installed]

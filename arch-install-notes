@@ -46,6 +46,12 @@ EndSection
 ## Set persistent time configuration
 rm /etc/localtime
 ln -s /usr/share/zoneInfo/America... /etc/localtime
+sudo pacman -S ntp
+sudo ntpd -qg
+
+https://wiki.archlinux.org/index.php/time
+https://www.techgainer.com/fix-windows-showing-wrong-time-in-linux-windows-dual-boot-system/
+https://bbs.archlinux.org/viewtopic.php?id=167407
 
 ## Set host name for computer
 echo nombreMaquina > /etc/hostname
