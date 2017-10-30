@@ -10,7 +10,8 @@ source /etc/environment
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="bureau"
-ZSH_THEME="geometry"
+# ZSH_THEME="geometry"
+ZSH_THEME="wedisagree"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
