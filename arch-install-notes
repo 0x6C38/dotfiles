@@ -133,6 +133,12 @@ Server = http://repo.archlinux.fr/$arch
 sudo pacman -Syu yaourt
 yaourt -Syu
 
+## Audio setup
+Something here made it work:
+sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib32-alsa-plugins
+sudo pacman -S pavucontrol
+pavucontrol (configure)
+
 ## i3wm setup
 pacman -S xorg-server xorg-xinit xorg-apps (xorg-apps replaces xorg-server-utils and xorg-utils)
 

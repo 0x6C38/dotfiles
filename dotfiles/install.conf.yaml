@@ -70,7 +70,7 @@
 
     # Fonts
     #- [yaourt -S ttf-font-awesome, Installing font awesome.]
-    #- [git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/, Cloning powerline fonts.]
+    #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
     #- [~/fonts/install.sh, Installing powerline fonts.]
     #- [rm -rf fonts, Cleaning up powerline fonts install.]
 
