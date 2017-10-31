@@ -91,6 +91,7 @@
     #~/.ssh: .ssh
     ~/.spacemacs: .spacemacs
     ~/.vimrc: .vimrc
+    ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
