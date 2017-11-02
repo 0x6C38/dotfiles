@@ -40,7 +40,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run
 #bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 - padding 800 -opacity "85" -bw 0 -font "System San Francisco Display 18"
 
-bindsym $mod+d exec rofi -show run -lines 3 -eh 1 -columns 1 -separator-style "none" -width 100 -padding 800 -opacity "70" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "$bg-color" -font "System San Francisco Display 18"
+bindsym $mod+d exec rofi -show run -lines 4 -eh 1 -columns 1 -separator-style "none" -width 100 -padding 800 -opacity "70" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "$bg-color" -font "System San Francisco Display 18" -hide-scrollbar "true"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -257,6 +257,7 @@ bar {
 bindsym $mod+shift+x exec i3lock-fancy lock
 
 assign [class="firefox"] $workspace1
+assign [class="keepassxc"] $workspace9
 
 # exec_always feh --bg-scale ~/Documents/Themes/i3wm-themes/Space/Space.png
 exec --no-startup-id wal -i $HOME/Pictures/Wallpapers
@@ -264,6 +265,7 @@ bindsym $mod+Print exec --no-startup-id wal -i $HOME/Pictures/Wallpapers
 
 exec_always compton -f -m 0.8
 exec firefox
+exec keepassxc
 # exec dolphin /run/media/dsalvio/Media
 
 for_window [class="^.*"] border pixel 0
