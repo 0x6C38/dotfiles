@@ -16,6 +16,12 @@
   - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
   - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
 
+    # Browser related
+  - [sudo pacman -S archlinux-keyring --needed --noconfirm, Making sure keyring is installed for qutebrowser.]
+  - [sudo pacman -S qutebrowser   --needed --noconfirm, Making sure qutebrowser is installed.]
+    #- [sudo pacman -S chromium      --needed --noconfirm, Making sure chromium is installed.]
+    #- [sudo pacman -S firefox       --needed --noconfirm, Making sure firefox is installed.]
+
     # Zsh related
   - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
     #- [sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)", Curling oh-my-zsh]
