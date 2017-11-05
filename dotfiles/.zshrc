@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
+  source "$HOME/.cache/wal/colors.sh" # Exports wal colors, comment if not used
 
 source /etc/environment
 
@@ -99,3 +100,4 @@ fi
 
 (wal -r -t &)
 neofetch
+# /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh algo paraver

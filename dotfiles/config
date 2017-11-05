@@ -228,6 +228,9 @@ bindsym Print mode "$mode_screenshot"
 set_from_resource $fg i3wm.color7 #dddddd
 set_from_resource $bg i3wm.color0 #f0f0f0
 
+
+
+
 # class                 border  backgr. text indicator child_border
 #client.focused          $bg     $bg     $fg  $bg       $bg
 #client.focused_inactive $bg     $bg     $fg  $bg       $bg
@@ -261,11 +264,14 @@ assign [class="keepassxc"] $workspace9
 
 # exec_always feh --bg-scale ~/Documents/Themes/i3wm-themes/Space/Space.png
 exec --no-startup-id wal -i $HOME/Pictures/Wallpapers
-bindsym $mod+Print exec --no-startup-id wal -i $HOME/Pictures/Wallpapers
+exec /media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh $HOME/.IntelliJIdea2017.2/config #"$fg" "$bg"
+
+bindsym $mod+Print exec "wal -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2017.2/config"
 
 exec_always compton -f -m 0.8
 exec firefox
 exec keepassxc
+# exec --no-startup-id chromium
 # exec dolphin /run/media/dsalvio/Media
 
 for_window [class="^.*"] border pixel 0
@@ -275,3 +281,7 @@ gaps outer 10
 
 smart_gaps on
 smart_borders on
+
+#set $leStr "bash /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh\ $fg\ $bg"
+#bindsym $mod+m exec /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh "$fg" "$bg"
+# bindsym $mod+m exec $leStr
