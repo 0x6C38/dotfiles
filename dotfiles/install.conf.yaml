@@ -84,6 +84,20 @@
   
 
     # Fonts
+  - [sudo pacman -S ttf-dejavu            --needed --noconfirm, Making sure ttf-dejavu font pack is installed]
+  - [sudo pacman -S ttf-anonymous-pro     --needed --noconfirm, Making sure ttf-anonymous font pack is installed]
+  - [sudo pacman -S ttf-bitstream-vera    --needed --noconfirm, Making sure ttf-bitstream-vera font pack is installed]
+  - [sudo pacman -S ttf-droid             --needed --noconfirm, Making sure ttf-droid font pack is installed]
+  - [sudo pacman -S ttf-fira-mono         --needed --noconfirm, Making sure ttf-fira-mono font pack is installed]
+  - [sudo pacman -S ttf-freefont          --needed --noconfirm, Making sure ttf-freefont pack is installed]
+  - [sudo pacman -S ttf-roboto            --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+    #  - [sudo pacman -S adobe-source-han-sans-otc-font   --needed --noconfirm, Making sure pan-cjk font pack is installed]
+  - [sudo pacman -S adobe-source-han-serif-otc-fonts --needed --noconfirm, Making sure pan-cjk font pack is installed]
+  - [sudo pacman -S noto-fonts-cjk        --needed --noconfirm, Making sure noto-fonts-cjk font pack is installed]
+  - [sudo pacman -S otf-ipafont           --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+  - [sudo pacman -S ttf-hanazono          --needed --noconfirm, Making sure ttf-hanazono font pack is installed]
+  - [sudo pacman -S ttf-sazanami          --needed --noconfirm, Making sure ttf-sazanami font pack is installed]
+  - [sudo pacman -S font-mathematica      --needed --noconfirm, Making sure font-mathematic is installed]
     #- [yaourt -S ttf-font-awesome, Installing font awesome.]
     #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
     #- [~/fonts/install.sh, Installing powerline fonts.]
