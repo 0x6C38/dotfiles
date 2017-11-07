@@ -31,6 +31,16 @@
     # System related
   - [sudo pacman -S numlockx      --needed --noconfirm, Making sure numlockx is installed]
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
+  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
+
+    # Media related
+  - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed]
+  - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
+    #- [yaourt      -S skypeforlinux-bin                 , Making sure skype is installed]
+    
+    ## Audio related
+    #  - [sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib3-alsa-plugins --needed --noconfirm, Making sure audio stuff is installed]
+    #  - [sudo pacman -S pavucontrol   --needed --noconfirm, Making sure pavucontrol is installed]
 
     # Development related
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
@@ -38,6 +48,7 @@
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
     #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
+    #  - [yaourt -S intellij-idea-ultimate-edition, Making sure intellij is installed]
 
     # Emacs related
   - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
@@ -51,11 +62,9 @@
     #- [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed] #Either conflict or corrupt package
 
     # Keepass related
-  - [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
+    #- [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
     #- [yaourt      -S xdotools      --needed --noconfirm, Making sure xdotools(keepass dependency) is installed]
   - [sudo pacman -S keepassxc     --needed --noconfirm, Making sure keepassxc is installed]
-    
-  - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
 
     # Language related
   - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
