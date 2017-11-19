@@ -49,6 +49,7 @@
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
     #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
     #  - [yaourt -S intellij-idea-ultimate-edition, Making sure intellij is installed]
+  - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
     # Emacs related
   - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]

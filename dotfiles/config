@@ -277,7 +277,7 @@ exec keepassxc
 
 for_window [class="^.*"] border pixel 0
 
-gaps inner 12
+gaps inner 15
 gaps outer 12
 
 smart_gaps on
@@ -287,7 +287,7 @@ set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+G mode "$mode_gaps"
 mode "$mode_gaps" {
 # all for every workspace, current for current
-    bindsym 1 mode "default", gaps inner current set 12, gaps outer current set 12
+    bindsym 1 mode "default", gaps inner current set 15, gaps outer current set 12
     bindsym 2 mode "default", gaps inner current set 1, gaps outer current set 1
     bindsym Return mode "default"
     bindsym Escape mode "default"
