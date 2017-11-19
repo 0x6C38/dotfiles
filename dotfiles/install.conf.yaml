@@ -80,9 +80,11 @@
   - [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
     #- [yaourt      -S python-pywal                      , Making sure pywal is installed]
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
-  - [sudo pacman -S transmission-cli  --needed --noconfirm, Making sure transmission is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure OS-prober is installed]
-  
+    
+
+  - [sudo pacman -S transmission-cli       --needed --noconfirm, Making sure transmission is installed]
+    #- [sudo pip3 install --upgrade torrench                   , Making sure torrench is is installed]
 
     # Fonts
   - [sudo pacman -S ttf-dejavu            --needed --noconfirm, Making sure ttf-dejavu font pack is installed]
@@ -109,6 +111,7 @@
     ~/.dotfiles: ''
     ~/.config/compton.conf: compton.conf
     ~/.i3/config: config
+    /media/MD/Downloads/Torrents/torrench/config.ini: config.ini
     #/etc/environment: environment
     ~/.gitconfig: .gitconfig
     ~/.i3/i3blocks.conf: i3blocks.conf
