@@ -51,6 +51,11 @@
     #  - [yaourt -S intellij-idea-ultimate-edition, Making sure intellij is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
+    # Virtualization related
+  - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
+    # sudo pacman linux-headers ?
+    #  - [sudo modprobe vboxdrv,                             Making sure modprobe vboxdrv is ok]
+
     # Emacs related
   - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
     #- [sudo rm -r ~/.emacs.d                ,  Deleting vanilla emacs config] 
