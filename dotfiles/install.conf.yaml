@@ -33,6 +33,11 @@
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
 
+    # Clipboard related
+    # Copy stuff to clipboard. Usage: something | xsel --clipboard --input
+  - [sudo pacman -S xsel          --needed --noconfirm, Making sure xsel is installed]
+    #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
+
     # Media related
   - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed]
   - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
@@ -47,7 +52,6 @@
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
-    #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
     #  - [yaourt -S intellij-idea-ultimate-edition, Making sure intellij is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
