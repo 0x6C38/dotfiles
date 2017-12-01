@@ -101,3 +101,7 @@ fi
 (wal -r -t &)
 neofetch
 # /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh algo paraver
+
+# Aliases
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
