@@ -55,6 +55,13 @@
     #  - [yaourt -S intellij-idea-ultimate-edition, Making sure intellij is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
+    # Databases related
+    # systemctl start mongodb.service | to start the service
+    # systemctl enable mongodb.service | to autostart on bootup
+    # default port for mongo is 27017
+  - [sudo pacman -S mongodb       --needed --noconfirm, Making sure mongodb is installed]
+    #- [yaourt -S mongodb-compass                        , Making sure mongodb-compass is installed]
+
     # Virtualization related
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
     # sudo pacman linux-headers ?
