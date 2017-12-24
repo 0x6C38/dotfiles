@@ -32,6 +32,7 @@
   - [sudo pacman -S numlockx      --needed --noconfirm, Making sure numlockx is installed]
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
+  - [sudo pacman -S pacaur        --needed --noconfirm, Making sure pacaur is installed]
 
     # Clipboard related
     # Copy stuff to clipboard. Usage: something | xsel --clipboard --input
@@ -42,6 +43,7 @@
   - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed]
   - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
     #- [yaourt      -S skypeforlinux-bin                 , Making sure skype is installed]
+  - [pacaur      -S discord       --needed --noconfirm --noedit, Making sure discord is installed]
     
     ## Audio related
     #  - [sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib3-alsa-plugins --needed --noconfirm, Making sure audio stuff is installed]
