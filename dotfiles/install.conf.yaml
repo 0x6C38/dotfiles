@@ -127,6 +127,7 @@
     ~/.dotfiles: ''
     ~/.config/compton.conf: compton.conf
     ~/.i3/config: config
+    ~/.config/chromium-flags.conf: chromium-flags.conf
     /media/MD/Downloads/Torrents/torrench/config.ini: config.ini
     #/etc/environment: environment
     ~/.gitconfig: .gitconfig
