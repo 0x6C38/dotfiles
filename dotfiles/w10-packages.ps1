@@ -19,17 +19,25 @@ choco install youtube-dl -y
 choco install vlc -y
 choco install keepass.install -y
 
+# Development related
+choco install git.install -y
+choco install postman -y
+
+## .NET
 choco install visualstudio2017community -y
 choco install sql-server-express -y
 choco install sql-server-management-studio -y
 
+## Java & Scala
+choco install sbt -y
+choco install jdk8 -y
 choco install jetbrainstoolbox -y
 choco install androidstudio -y
 
-choco install git.install -y
+## Databases
+choco install postgresql -y
+choco install pgadmin4 -y|
 
-choco install sbt -y
-choco install jdk8 -y
 
 choco install discord -y
 choco install skype -y (requires c++ redistributable packages)
