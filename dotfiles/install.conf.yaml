@@ -58,11 +58,26 @@
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
     # Databases related
+
+    ## MongoDB
     # systemctl start mongodb.service | to start the service
     # systemctl enable mongodb.service | to autostart on bootup
     # default port for mongo is 27017
   - [sudo pacman -S mongodb       --needed --noconfirm, Making sure mongodb is installed]
     #- [yaourt -S mongodb-compass                        , Making sure mongodb-compass is installed]
+
+    ## Postgresql
+    # Default port for postgres is 5432. User: postgres, no password.
+  - [sudo pacman -S postgresql    --needed --noconfirm,          Making sure postgres is installed]
+  - [pacaur -S pgadmin4           --needed --noconfirm --noedit, Making sure pgadmin4 is installed from the AUR]
+    
+    # Must initialize postgresql after installation
+    # sudo -u postgres -i
+    # initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
+    # exit
+    # sudo systemctl enable postgresql.service
+    
+    # [sudo systemctl start postgresql.service, Start the postgresql service to use it]
 
     # Virtualization related
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
