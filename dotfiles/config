@@ -126,13 +126,13 @@ bindsym $mod+a focus parent
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-set $workspace1 ""
-set $workspace2 ""
-set $workspace3 ""
-set $workspace8 ""
-set $workspace9 ""
-#set $workspace10 ""
-set $workspace10 ""
+set $workspace1 "1:"
+set $workspace2 "2:"
+set $workspace3 "3:"
+set $workspace8 "8:"
+set $workspace9 "9:"
+#set $workspace10 "10:"
+set $workspace10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -250,6 +250,7 @@ bar {
         #status_command i3status
         status_command i3blocks -c ~/.i3/i3blocks.conf
 #   statusbar colors       border      background   text
+    strip_workspace_numbers yes
     colors {
         background          $bg
         statusline          $fg
