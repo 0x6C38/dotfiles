@@ -119,6 +119,13 @@
   - [sudo pacman -S transmission-cli       --needed --noconfirm, Making sure transmission is installed]
     #- [sudo pip3 install --upgrade torrench                   , Making sure torrench is is installed]
 
+    # Read/Write/Related
+
+    # Readers
+  - [sudo pacman -S evince                --needed --noconfirm, Making sure evince pdf/generalr eader is installed]
+    #- [sudo pacman -S phonon-qt5-gstreamer  --needed --noconfirm, Making sure phonon gstreamer (okular dependency) is installed]
+    #- [sudo pacman -S okular                --needed --noconfirm, Making sure Okular pdf/general reader with qt dependencies is installed]
+    
     # Fonts
   - [sudo pacman -S ttf-dejavu            --needed --noconfirm, Making sure ttf-dejavu font pack is installed]
   - [sudo pacman -S ttf-anonymous-pro     --needed --noconfirm, Making sure ttf-anonymous font pack is installed]
