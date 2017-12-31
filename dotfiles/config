@@ -302,3 +302,11 @@ mode "$mode_gaps" {
 #bindsym $mod+m exec /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh "$fg" "$bg"
 # bindsym $mod+m exec $leStr
 
+
+# Scratchpad terminal.
+# https://faq.i3wm.org/question/2420/dropdown-terminal-in-i3/
+# Using a custom title string with criteria is deliberate and keeps things simple.
+exec_always --no-startup-id termite --name termite_scratchpad
+for_window [instance="termite_scratchpad"] floating enable
+for_window [instance="termite_scratchpad"] move scratchpad
+bindsym $mod+shift+Return [instance="termite_scratchpad"] scratchpad show
