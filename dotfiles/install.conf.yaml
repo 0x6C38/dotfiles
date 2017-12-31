@@ -54,7 +54,8 @@
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
-    #  - [yaourt -S intellij-idea-ultimate-edition, Making sure intellij is installed]
+  - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed]
+  - [pacaur -S     android-studio --needed --noconfirm --noedit, Making sure android-studio is installed from AUR]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
     # Databases related
