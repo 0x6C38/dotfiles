@@ -15,6 +15,9 @@ export XDG_CONFIG_HOME
 LC_ALL=en_GB.UTF-8
 LANG=en_GB.UTF-8
 
+# Android related
+ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
+
 # These don't work
 # alias pbcopy='xsel --clipboard --input'
 # alias pbpaste='xsel --clipboard --output'

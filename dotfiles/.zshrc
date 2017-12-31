@@ -3,7 +3,12 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
-  source "$HOME/.cache/wal/colors.sh" # Exports wal colors, comment if not used
+#  source "$HOME/.cache/wal/colors.sh" # Exports wal colors, comment if not used
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
 
 source /etc/environment
 
@@ -98,7 +103,9 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-(wal -r -t &)
+#(wal -r -t &)
+(wal -t &)
+(cat $HOME/.cache/wal/sequences)
 neofetch
 # /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh algo paraver
 
