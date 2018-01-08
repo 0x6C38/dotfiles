@@ -31,7 +31,7 @@ locale-gen
 
 ## Set persistent keyboard map layout
 echo "KEYMAP=la-latin1" > /etc/vconsole.conf
-sudo nano /etc/X11/xorg.conf.d/10-keyboard.conf
+sudo nano /etc/X11/xorg.conf.d/10-keyboard.conf #Is it 00-keyboard.conf ??
 
 Section "InputClass"
         Identifier "system-keyboard"
