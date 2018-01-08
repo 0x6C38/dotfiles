@@ -58,10 +58,10 @@
     #- [sudo pacman -S firefox       --needed --noconfirm, Making sure firefox is installed.]
 
     # Media related
-  - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed]
-  - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
-    #- [yaourt      -S skypeforlinux-bin                 , Making sure skype is installed]
-  - [pacaur      -S discord       --needed --noconfirm --noedit, Making sure discord is installed]
+  - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed.]
+  - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed.]
+  - [pacaur      -S skypeforlinux-bin --needed --noconfirm --noedit, Making sure skype is installed from the AUR.]
+  - [pacaur      -S discord       --needed --noconfirm --noedit, Making sure discord is installed from the AUR.]
 
     # Read/Write/Related
     # Readers
@@ -90,7 +90,7 @@
   - [sudo pacman -S ttf-hanazono          --needed --noconfirm, Making sure ttf-hanazono font pack is installed]
   - [sudo pacman -S ttf-sazanami          --needed --noconfirm, Making sure ttf-sazanami font pack is installed]
   - [sudo pacman -S font-mathematica      --needed --noconfirm, Making sure font-mathematic is installed]
-    #- [yaourt -S ttf-font-awesome, Installing font awesome.]
+  - [pacaur -S ttf-font-awesome           --needed --noconfirm --noedit, Making sure font awesome is installed from the AUR.]
     #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
     #- [~/fonts/install.sh, Installing powerline fonts.]
     #- [rm -rf fonts, Cleaning up powerline fonts install.]
@@ -108,9 +108,9 @@
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
-  - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed]
+  - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed from the AUR.]
     # https://stackoverflow.com/questions/35911302/cannot-launch-emulator-on-linux-ubuntu-15-10
-  - [pacaur -S     android-studio --needed --noconfirm --noedit, Making sure android-studio is installed from AUR]
+  - [pacaur -S     android-studio --needed --noconfirm --noedit, Making sure android-studio is installed from the AUR.]
 
     # Databases related
 
@@ -119,12 +119,12 @@
     # systemctl enable mongodb.service | to autostart on bootup
     # default port for mongo is 27017
   - [sudo pacman -S mongodb       --needed --noconfirm, Making sure mongodb is installed]
-    #- [yaourt -S mongodb-compass                        , Making sure mongodb-compass is installed]
+  - [pacaur -S mongodb-compass    --needed --noconfirm --noedit, Making sure mongodb-compass is installed from the AUR.]
 
     ## Postgresql
     # Default port for postgres is 5432. User: postgres, no password.
   - [sudo pacman -S postgresql    --needed --noconfirm,          Making sure postgres is installed]
-  - [pacaur -S pgadmin4           --needed --noconfirm --noedit, Making sure pgadmin4 is installed from the AUR]
+  - [pacaur -S pgadmin4           --needed --noconfirm --noedit, Making sure pgadmin4 is installed from the AUR.]
     
     # Must initialize postgresql after installation
     # sudo -u postgres -i
@@ -135,12 +135,12 @@
     # [sudo systemctl start postgresql.service, Start the postgresql service to use it]
 
     # i3 related
-    #- [yaourt -S neofetch                            , Making sure neofetch is installed]
+  - [pacaur -S neofetch           --needed --noconfirm --noedit, Making sure neofetch is installed from the AUR.]
   - [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
   - [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
   - [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
   - [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
-    #- [yaourt      -S python-pywal                      , Making sure pywal is installed]
+  - [pacaur      -S python-pywal  --needed --noconfirm --noedit, Making sure pywal is installed from the AUR.]
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure OS-prober is installed]
     
