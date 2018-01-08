@@ -11,17 +11,10 @@
   - [git submodule update --init --recursive, Installing submodules]
 
     # System related
+  - [sudo pacman -S pacaur        --needed --noconfirm, Making sure pacaur is installed]
   - [sudo pacman -S numlockx      --needed --noconfirm, Making sure numlockx is installed]
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
-  - [sudo pacman -S pacaur        --needed --noconfirm, Making sure pacaur is installed]
-
-  - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
-  - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
-  - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
-    #- [yaourt   -S gtop                              , Making sure gtop is installed]
-  - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
-  - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
 
     # Clipboard related
     # Copy stuff to clipboard. Usage: something | xsel --clipboard --input
@@ -32,6 +25,31 @@
     #  - [sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib3-alsa-plugins --needed --noconfirm, Making sure audio stuff is installed]
     #  - [sudo pacman -S pavucontrol   --needed --noconfirm, Making sure pavucontrol is installed]
 
+    # Shell/Zsh related
+  - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
+    #- [sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)", Curling oh-my-zsh]
+    #- [sudo cp -r /root/.oh-my-zsh ~/, Copying oh-my-zsh from root to current user folder]
+    #- [sudo git clone https://github.com/geometry-zsh/geometry $HOME/.oh-my-zsh/custom/themes, Cloning oh-my-zsh's geometry theme.]
+
+    # Language related
+  - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
+  - [sudo pacman -S fcitx-mozc           --needed --noconfirm, Making sure fcitx-mozc is installed]
+  - [sudo pacman -S fcitx-configtool     --needed --noconfirm, Making sure fcitx-configtool is installed]
+
+    # Keepass related
+    #- [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
+    #- [yaourt      -S xdotools      --needed --noconfirm, Making sure xdotools(keepass dependency) is installed]
+  - [sudo pacman -S keepassxc     --needed --noconfirm, Making sure keepassxc is installed]
+
+
+    # General
+  - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
+  - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
+  - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
+    #- [yaourt   -S gtop                              , Making sure gtop is installed]
+  - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
+  - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
+
     # Browser related
   - [sudo pacman -S archlinux-keyring --needed --noconfirm, Making sure keyring is installed for qutebrowser.]
   - [sudo pacman -S qutebrowser   --needed --noconfirm, Making sure qutebrowser is installed.]
@@ -39,18 +57,50 @@
     #- [pacaur -S chromium-widevine  --needed --noconfirm --noedit, Making sure widevine is installed to watch netflix on chromium.]
     #- [sudo pacman -S firefox       --needed --noconfirm, Making sure firefox is installed.]
 
-    # Zsh related
-  - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
-    #- [sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)", Curling oh-my-zsh]
-    #- [sudo cp -r /root/.oh-my-zsh ~/, Copying oh-my-zsh from root to current user folder]
-    #- [sudo git clone https://github.com/geometry-zsh/geometry $HOME/.oh-my-zsh/custom/themes, Cloning oh-my-zsh's geometry theme.]
-
     # Media related
   - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed]
   - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed]
     #- [yaourt      -S skypeforlinux-bin                 , Making sure skype is installed]
   - [pacaur      -S discord       --needed --noconfirm --noedit, Making sure discord is installed]
-    
+
+    # Read/Write/Related
+    # Readers
+  - [sudo pacman -S evince                --needed --noconfirm, Making sure evince pdf/general reader is installed]
+    #- [sudo pacman -S phonon-qt5-gstreamer  --needed --noconfirm, Making sure phonon gstreamer (okular dependency) is installed]
+    #- [sudo pacman -S okular                --needed --noconfirm, Making sure Okular pdf/general reader with qt dependencies is installed]
+
+    # Emacs related
+  - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
+    #- [sudo rm -r ~/.emacs.d                ,  Deleting vanilla emacs config] 
+    #- [git clone "https://github.com/syl20bnr/spacemacs" "~/.emacs.d", Making sure spacemacs is installed]
+  - [sudo pacman -S adobe-source-code-pro-fonts --needed, Making sure adobe fonts is installed]
+
+    # Fonts
+  - [sudo pacman -S ttf-dejavu            --needed --noconfirm, Making sure ttf-dejavu font pack is installed]
+  - [sudo pacman -S ttf-anonymous-pro     --needed --noconfirm, Making sure ttf-anonymous font pack is installed]
+  - [sudo pacman -S ttf-bitstream-vera    --needed --noconfirm, Making sure ttf-bitstream-vera font pack is installed]
+  - [sudo pacman -S ttf-droid             --needed --noconfirm, Making sure ttf-droid font pack is installed]
+  - [sudo pacman -S ttf-fira-mono         --needed --noconfirm, Making sure ttf-fira-mono font pack is installed]
+  - [sudo pacman -S ttf-freefont          --needed --noconfirm, Making sure ttf-freefont pack is installed]
+  - [sudo pacman -S ttf-roboto            --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+    #  - [sudo pacman -S adobe-source-han-sans-otc-font   --needed --noconfirm, Making sure pan-cjk font pack is installed]
+  - [sudo pacman -S adobe-source-han-serif-otc-fonts --needed --noconfirm, Making sure pan-cjk font pack is installed]
+  - [sudo pacman -S noto-fonts-cjk        --needed --noconfirm, Making sure noto-fonts-cjk font pack is installed]
+  - [sudo pacman -S otf-ipafont           --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+  - [sudo pacman -S ttf-hanazono          --needed --noconfirm, Making sure ttf-hanazono font pack is installed]
+  - [sudo pacman -S ttf-sazanami          --needed --noconfirm, Making sure ttf-sazanami font pack is installed]
+  - [sudo pacman -S font-mathematica      --needed --noconfirm, Making sure font-mathematic is installed]
+    #- [yaourt -S ttf-font-awesome, Installing font awesome.]
+    #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
+    #- [~/fonts/install.sh, Installing powerline fonts.]
+    #- [rm -rf fonts, Cleaning up powerline fonts install.]
+
+       
+    # Virtualization related
+  - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
+    # sudo pacman linux-headers ?
+    #  - [sudo modprobe vboxdrv,                             Making sure modprobe vboxdrv is ok]
+
     # Development related
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
@@ -84,32 +134,6 @@
     
     # [sudo systemctl start postgresql.service, Start the postgresql service to use it]
 
-    # Virtualization related
-  - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
-    # sudo pacman linux-headers ?
-    #  - [sudo modprobe vboxdrv,                             Making sure modprobe vboxdrv is ok]
-
-    # Emacs related
-  - [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
-    #- [sudo rm -r ~/.emacs.d                ,  Deleting vanilla emacs config] 
-    #- [git clone "https://github.com/syl20bnr/spacemacs" "~/.emacs.d", Making sure spacemacs is installed]
-  - [sudo pacman -S adobe-source-code-pro-fonts --needed, Making sure adobe fonts is installed]
-
-    # Ranger related
-  - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
-  - [sudo pacman -S w3m           --needed --noconfirm, Making sure w3m (ranger dependency) is installed]
-    #- [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed] #Either conflict or corrupt package
-
-    # Keepass related
-    #- [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
-    #- [yaourt      -S xdotools      --needed --noconfirm, Making sure xdotools(keepass dependency) is installed]
-  - [sudo pacman -S keepassxc     --needed --noconfirm, Making sure keepassxc is installed]
-
-    # Language related
-  - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
-  - [sudo pacman -S fcitx-mozc           --needed --noconfirm, Making sure fcitx-mozc is installed]
-  - [sudo pacman -S fcitx-configtool     --needed --noconfirm, Making sure fcitx-configtool is installed]
-
     # i3 related
     #- [yaourt -S neofetch                            , Making sure neofetch is installed]
   - [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
@@ -120,37 +144,15 @@
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure OS-prober is installed]
     
+    # Ranger related
+  - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
+  - [sudo pacman -S w3m           --needed --noconfirm, Making sure w3m (ranger dependency) is installed]
+    #- [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed] #Either conflict or corrupt package
 
   - [sudo pacman -S transmission-cli       --needed --noconfirm, Making sure transmission is installed]
     #- [sudo pip3 install --upgrade torrench                   , Making sure torrench is is installed]
 
-    # Read/Write/Related
-
-    # Readers
-  - [sudo pacman -S evince                --needed --noconfirm, Making sure evince pdf/generalr eader is installed]
-    #- [sudo pacman -S phonon-qt5-gstreamer  --needed --noconfirm, Making sure phonon gstreamer (okular dependency) is installed]
-    #- [sudo pacman -S okular                --needed --noconfirm, Making sure Okular pdf/general reader with qt dependencies is installed]
-    
-    # Fonts
-  - [sudo pacman -S ttf-dejavu            --needed --noconfirm, Making sure ttf-dejavu font pack is installed]
-  - [sudo pacman -S ttf-anonymous-pro     --needed --noconfirm, Making sure ttf-anonymous font pack is installed]
-  - [sudo pacman -S ttf-bitstream-vera    --needed --noconfirm, Making sure ttf-bitstream-vera font pack is installed]
-  - [sudo pacman -S ttf-droid             --needed --noconfirm, Making sure ttf-droid font pack is installed]
-  - [sudo pacman -S ttf-fira-mono         --needed --noconfirm, Making sure ttf-fira-mono font pack is installed]
-  - [sudo pacman -S ttf-freefont          --needed --noconfirm, Making sure ttf-freefont pack is installed]
-  - [sudo pacman -S ttf-roboto            --needed --noconfirm, Making sure ttf-roboto font pack is installed]
-    #  - [sudo pacman -S adobe-source-han-sans-otc-font   --needed --noconfirm, Making sure pan-cjk font pack is installed]
-  - [sudo pacman -S adobe-source-han-serif-otc-fonts --needed --noconfirm, Making sure pan-cjk font pack is installed]
-  - [sudo pacman -S noto-fonts-cjk        --needed --noconfirm, Making sure noto-fonts-cjk font pack is installed]
-  - [sudo pacman -S otf-ipafont           --needed --noconfirm, Making sure ttf-roboto font pack is installed]
-  - [sudo pacman -S ttf-hanazono          --needed --noconfirm, Making sure ttf-hanazono font pack is installed]
-  - [sudo pacman -S ttf-sazanami          --needed --noconfirm, Making sure ttf-sazanami font pack is installed]
-  - [sudo pacman -S font-mathematica      --needed --noconfirm, Making sure font-mathematic is installed]
-    #- [yaourt -S ttf-font-awesome, Installing font awesome.]
-    #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
-    #- [~/fonts/install.sh, Installing powerline fonts.]
-    #- [rm -rf fonts, Cleaning up powerline fonts install.]
-
+   
 
 - link:
     ~/.dotfiles: ''
