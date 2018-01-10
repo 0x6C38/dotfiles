@@ -55,10 +55,10 @@ bindsym $mod+d exec rofi -show run -lines 4 -eh 1 -columns 1 -separator-style "n
 floating_modifier $alt
 
 # change focus
-bindsym $mod+j focus leftk
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ntilde focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -78,8 +78,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
+# split in horizontal orientation (not needed as vertical by default)
+# bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v

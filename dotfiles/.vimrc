@@ -104,3 +104,27 @@ let g:hybrid_termtrans=1
 "colorscheme Tomorrow-Night
 hi Normal ctermbg=none
 
+" Custom
+" Auto-indent
+set ai
+
+" Show title
+set title
+
+" Relative line numbers
+set number relativenumber
+
+" Relative/Absolute auto-toggle
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" Select current line
+set cursorline
+hi CursorLine term=bold cterm=bold 
+
+" Select vertically
+" set cursorcolumn
+
