@@ -19,6 +19,8 @@ choco install youtube-dl -y
 choco install vlc -y
 choco install keepass.install -y
 
+choco install winrar -y
+
 # Development related
 choco install git.install -y
 choco install postman -y
