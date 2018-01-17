@@ -180,6 +180,7 @@
     #~/.ssh: .ssh
     ~/.spacemacs: .spacemacs
     ~/.vimrc: .vimrc
+    /etc/xdg/termite/config: termite-config
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
     ~/.zprofile: .zprofile
