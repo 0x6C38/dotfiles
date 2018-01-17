@@ -19,5 +19,6 @@ XTerm*background: #2b2b2b
 XTerm*foreground: #e7e7e7
 XTerm*pointerColor: #16A085
 XTerm*faceName: Fixed
-XTerm*faceSize: 24 
+XTerm*faceSize: 11
 
+Xcursor.theme: Breeze-Blue
