@@ -96,7 +96,24 @@
     #- [~/fonts/install.sh, Installing powerline fonts.]
     #- [rm -rf fonts, Cleaning up powerline fonts install.]
 
-       
+    # Cursor related
+    #- [rm -r $HOME/Downloads/gh-repos/breeze-cursors, Removes old copy of repo if it exists.]
+    #- [git clone https://github.com/thegreatyellow67/Breeze-Serie-for-Righties-Cursors $HOME/Downloads/gh-repos/breeze-cursors, Cloning Breeze cursors.]
+    #- [rm -r /tmp/breeze, Removing temp directory in case it exists.]
+    #- [mkdir /tmp/breeze, Creating temp directory for cursors.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Blue.tgz -C /tmp/breeze, Extracting (breeze-blue) icon theme.]
+    #- [sudo mv -r /tmp/breeze/Breeze-Blue $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Obsidian.tgz -C /tmp/breeze, Extracting (breeze-obsidian) icon theme.]
+    #- [sudo mv -r /tmp/breeze/Breeze-Obsidian $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Snow.tgz -C /tmp/breeze, Extracting (breeze-snow) icon theme.]
+    #- [sudo mv -r /tmp/breeze/Breeze-Snow $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Red.tgz -C /tmp/breeze, Extracting (breeze-snow) icon theme.]
+    #- [sudo mv -r /tmp/breeze/Breeze-Red $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Turquoise.tgz -C /tmp/breeze, Extracting (breeze-turquoise) icon theme.]
+    #- [sudo mv -r /tmp/breeze/Breeze-Turquoise $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Purple.tgz -C /tmp/breeze, Extracting (breeze-purple) icon theme.]
+    #- [sudo mv -r /tmp/breeze/Breeze-Purple $HOME/.icons, Moving theme to icon folder.]
+           
     # Virtualization related
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
     # sudo pacman linux-headers ?
