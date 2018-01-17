@@ -49,6 +49,7 @@
     #- [yaourt   -S gtop                              , Making sure gtop is installed]
   - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
   - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
+  - [sudo pacman -S less          --needed --noconfirm, Making sure less is installed]
 
     # Browser related
   - [sudo pacman -S archlinux-keyring --needed --noconfirm, Making sure keyring is installed for qutebrowser.]
