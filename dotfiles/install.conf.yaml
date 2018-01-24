@@ -16,6 +16,9 @@
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
   - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
 
+    # GPU drivers
+  - [sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon --needed --noconfirm, Making sure open source AMD drivers are installed.]
+
     # Clipboard related
     # Copy stuff to clipboard. Usage: something | xsel --clipboard --input
   - [sudo pacman -S xsel          --needed --noconfirm, Making sure xsel is installed]
@@ -102,17 +105,17 @@
     #- [rm -r /tmp/breeze, Removing temp directory in case it exists.]
     #- [mkdir /tmp/breeze, Creating temp directory for cursors.]
     #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Blue.tgz -C /tmp/breeze, Extracting (breeze-blue) icon theme.]
-    #- [sudo mv -r /tmp/breeze/Breeze-Blue $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo mv /tmp/breeze/Breeze-Blue $HOME/.icons, Moving theme to icon folder.]
     #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Obsidian.tgz -C /tmp/breeze, Extracting (breeze-obsidian) icon theme.]
-    #- [sudo mv -r /tmp/breeze/Breeze-Obsidian $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo mv /tmp/breeze/Breeze-Obsidian $HOME/.icons, Moving theme to icon folder.]
     #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Snow.tgz -C /tmp/breeze, Extracting (breeze-snow) icon theme.]
-    #- [sudo mv -r /tmp/breeze/Breeze-Snow $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo mv /tmp/breeze/Breeze-Snow $HOME/.icons, Moving theme to icon folder.]
     #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Red.tgz -C /tmp/breeze, Extracting (breeze-snow) icon theme.]
-    #- [sudo mv -r /tmp/breeze/Breeze-Red $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo mv /tmp/breeze/Breeze-Red $HOME/.icons, Moving theme to icon folder.]
     #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Turquoise.tgz -C /tmp/breeze, Extracting (breeze-turquoise) icon theme.]
-    #- [sudo mv -r /tmp/breeze/Breeze-Turquoise $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo mv /tmp/breeze/Breeze-Turquoise $HOME/.icons, Moving theme to icon folder.]
     #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Purple.tgz -C /tmp/breeze, Extracting (breeze-purple) icon theme.]
-    #- [sudo mv -r /tmp/breeze/Breeze-Purple $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo mv /tmp/breeze/Breeze-Purple $HOME/.icons, Moving theme to icon folder.]
            
     # Virtualization related
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
@@ -181,6 +184,7 @@
 
 - link:
     ~/.dotfiles: ''
+    /etc/X11/xorg.conf.d/20-amdgpu.conf: 20-amdgpu.conf
     ~/.config/compton.conf: compton.conf
     ~/.i3/config: config
     ~/.config/chromium-flags.conf: chromium-flags.conf
