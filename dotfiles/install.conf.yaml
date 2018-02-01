@@ -94,7 +94,7 @@
   - [sudo pacman -S ttf-hanazono          --needed --noconfirm, Making sure ttf-hanazono font pack is installed]
   - [sudo pacman -S ttf-sazanami          --needed --noconfirm, Making sure ttf-sazanami font pack is installed]
   - [sudo pacman -S font-mathematica      --needed --noconfirm, Making sure font-mathematic is installed]
-  - [pacaur -S ttf-font-awesome           --needed --noconfirm --noedit, Making sure font awesome is installed from the AUR.]
+  - [pacaur -S otf-font-awesome           --needed --noconfirm --noedit, Making sure font awesome is installed from the AUR.]
     #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
     #- [~/fonts/install.sh, Installing powerline fonts.]
     #- [rm -rf fonts, Cleaning up powerline fonts install.]
