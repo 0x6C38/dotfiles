@@ -102,12 +102,10 @@ source $ZSH/oh-my-zsh.sh
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
-
-#(wal -r -t &)
+# This outputs 
 (wal -t &)
 (cat $HOME/.cache/wal/sequences)
 neofetch
-# /media/MD/Development/Projects/Bash/most-self-important-name-ever.sh algo paraver
 
 # Aliases
 alias pbcopy='xsel --clipboard --input'
