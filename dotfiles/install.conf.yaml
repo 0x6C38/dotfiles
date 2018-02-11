@@ -142,6 +142,14 @@
     # VS Code
     # Extensions can be listed via code --list-extensions and installed via code --install-extension {ext1}. Maybe manage extensions here in the future.
   - [pacaur -S visual-studio-code-bin --needed --noconfirm --noedit, Making sure visual studio code is installed from the AUR with shortcut name code.]
+    
+    # Extensions
+  - [code --install-extension thekalinga.bootstrap4-vscode, Making sure vscode bootstrap4 extension is installed.]
+  - [code --install-extension HookyQR.beautify, Making sure vscode beautify extension is installed.]
+  - [code --install-extension abusaidm.html-snippets, Making sure vscode html snippets extension is installed.]
+  - [code --install-extension alefragnani.project-manager, Making sure vscode project management extension is installed.]
+  - [code --install-extension christian-kohler.path-intellisense, Making sure vscode path intellisense extension is installed.]
+
 
     # Elastic Search
   - [sudo pacman -S elasticsearch --needed --noconfirm, Making sure elastic search is installed]
