@@ -126,12 +126,18 @@
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
+
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
+  - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
+  - [sudo pacman -S npm           --needed --noconfirm, Making sure node package manager is installed]
+
+    # IDEs & Editors
   - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed from the AUR.]
     # https://stackoverflow.com/questions/35911302/cannot-launch-emulator-on-linux-ubuntu-15-10
   - [pacaur -S     android-studio --needed --noconfirm --noedit, Making sure android-studio is installed from the AUR.]
+  - [pacaur -S visual-studio-code-bin --needed --noconfirm --noedit, Making sure visual studio code is installed from the AUR.]
 
     # Elastic Search
   - [sudo pacman -S elasticsearch --needed --noconfirm, Making sure elastic search is installed]
