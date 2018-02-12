@@ -216,6 +216,7 @@
     #/etc/profile: profile
     ~/.config/ranger/rc.conf: rc.conf
     ~/.config/ranger/rifle.conf: rifle.conf
+    ~/.config/rofi/config: rofi-conf
     #~/.ssh: .ssh
     ~/.spacemacs: .spacemacs
     ~/.vimrc: .vimrc
