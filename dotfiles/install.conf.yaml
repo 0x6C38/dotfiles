@@ -128,6 +128,7 @@
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
 
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
+  - [sudo pacman -S python        --needed --noconfirm, Making sure python is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
   - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
