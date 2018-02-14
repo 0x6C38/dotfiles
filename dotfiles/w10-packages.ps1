@@ -20,9 +20,11 @@ choco install vlc -y
 choco install keepass.install -y
 
 choco install winrar -y
+choco install totalcommander -y
 
 # Development related
 choco install git.install -y
+choco install poshgit -y
 choco install postman -y
 
 ## .NET
@@ -44,7 +46,7 @@ choco install pgadmin4 -y|
 choco install discord -y
 choco install skype -y (requires c++ redistributable packages)
 
-choco install utorrent --ignore-checksums
+choco install utorrent -y --ignore-checksums
 
 # Update all:
 choco update all -y
