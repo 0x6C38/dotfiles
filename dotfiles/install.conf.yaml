@@ -133,6 +133,8 @@
   - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
   - [sudo pacman -S npm           --needed --noconfirm, Making sure node package manager is installed]
 
+  - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
+
     # IDEs & Editors
     # Jetbrains
   - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed from the AUR.]
