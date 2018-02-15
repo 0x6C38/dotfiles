@@ -123,16 +123,23 @@
     #  - [sudo modprobe vboxdrv,                             Making sure modprobe vboxdrv is ok]
 
     # Development related
+    # Scala/Java
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
 
+    # Python
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
   - [sudo pacman -S python        --needed --noconfirm, Making sure python is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
+    # Nodejs
   - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
   - [sudo pacman -S npm           --needed --noconfirm, Making sure node package manager is installed]
+  - [pacaur      -S nvm           --needed --noconfirm --noedit, Making sure node version manager is installed from the AUR.]
+    #- [curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash, Installing nvm via curl in case AUR package doesn't work. Requires restart after installation.]
+  - [nvm install node, Making sure node is installed from the node version manager.]
+  - [npm install serverless -g, Making sure serverless framework is globally installed from through npm.]
 
   - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
 
