@@ -33,6 +33,7 @@ choco install sql-server-express -y
 choco install sql-server-management-studio -y
 
 ## Java & Scala
+choco install maven -y
 choco install sbt -y
 choco install jdk8 -y
 choco install jetbrainstoolbox -y
