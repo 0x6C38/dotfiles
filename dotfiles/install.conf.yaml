@@ -198,7 +198,6 @@
   - [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
   - [pacaur      -S python-pywal  --needed --noconfirm --noedit, Making sure pywal is installed from the AUR.]
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
-  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure OS-prober is installed]
     
     # Ranger related
   - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
