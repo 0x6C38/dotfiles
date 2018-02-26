@@ -129,7 +129,6 @@
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
 
     # Python
-  - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
   - [sudo pacman -S python        --needed --noconfirm, Making sure python is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
@@ -141,7 +140,12 @@
   - [nvm install node, Making sure node is installed from the node version manager.]
   - [npm install serverless -g, Making sure serverless framework is globally installed from through npm.]
 
+    # Golang
+  - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
+
+    # Utils
   - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
+  - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
 
     # IDEs & Editors
     # Jetbrains
