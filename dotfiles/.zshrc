@@ -104,7 +104,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 # This outputs 
 (wal -t &)
-(cat $HOME/.cache/wal/sequences)
 neofetch
 
 # Aliases
