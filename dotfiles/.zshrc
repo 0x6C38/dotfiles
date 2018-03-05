@@ -61,7 +61,7 @@ ZSH_THEME="wedisagree"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cp jump nyan)
+plugins=(git cp jump nyan globalias)
 
 source $ZSH/oh-my-zsh.sh
 # source antigen.zsh
@@ -94,17 +94,22 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Aliases
+alias -g zshconfig="vim ~/.zshrc"
+alias -g ohmyzsh="vim ~/.oh-my-zsh"
+alias -g reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias -g ytp='youtube-dl -cio "%(playlist_index)s-%(title)s.%(ext)s" '
+alias -g lsn="ls --color=no"
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
-# This outputs 
-(wal -t &)
-neofetch
+
+# This outputs an error "gtk: Use -g to generate an oomox theme."
+#(wal -t &)
+
+(neofetch &)
 
 # Aliases
 alias pbcopy='xsel --clipboard --input'
