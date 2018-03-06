@@ -276,7 +276,7 @@ exec --no-startup-id "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/
 bindsym $mod+Print exec "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2017.3/config"
 
 exec_always compton -f -m 0.8
-exec firefox
+# exec firefox
 exec keepassxc
 # exec --no-startup-id chromium
 # exec dolphin /run/media/dsalvio/Media
