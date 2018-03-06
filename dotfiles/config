@@ -273,7 +273,7 @@ assign [class="keepassxc"] $workspace9
 exec --no-startup-id "wal -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh $HOME/.IntelliJIdea2017.3/config"
 # exec "/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh $HOME/.IntelliJIdea2017.3/config"
 
-bindsym $mod+Print exec "wal -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2017.3/config"
+bindsym $mod+Print exec "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2017.3/config"
 
 exec_always compton -f -m 0.8
 exec firefox

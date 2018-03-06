@@ -107,7 +107,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 # This outputs an error "gtk: Use -g to generate an oomox theme."
-#(wal -t &)
+(wal -t -g &)
 
 (neofetch &)
 
