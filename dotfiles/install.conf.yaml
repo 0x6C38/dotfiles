@@ -205,6 +205,11 @@
     # Pywal related
   - [pacaur      -S python-pywal  --needed --noconfirm --noedit, Making sure pywal is installed from the AUR.]
   - [pacaur      -S oomox         --needed --noconfirm --noedit, Making sure oomox is installed from the AUR to generate pywal gtk themes.]
+
+    # Notes: In order to get pywal working with gtk oomox must be installed and it requires python2 to be installed as well. Finally it is also necessary
+    # to configure gtk2 and gtk3 to use the generated wal theme. Firefox seems to pick the# gtk theme by default but chrome only seems to do so when set to use gtk
+    # is set. It may also be necessary to configure ~/.config/chromium/Default/User StyleSheets/Custom.css as per pywal doc but there is something weird about that 
+    # file so it can't be handled normally and included here.
     
     # Ranger related
   - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
