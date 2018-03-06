@@ -200,8 +200,11 @@
   - [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
   - [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
   - [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
-  - [pacaur      -S python-pywal  --needed --noconfirm --noedit, Making sure pywal is installed from the AUR.]
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
+
+    # Pywal related
+  - [pacaur      -S python-pywal  --needed --noconfirm --noedit, Making sure pywal is installed from the AUR.]
+  - [pacaur      -S oomox         --needed --noconfirm --noedit, Making sure oomox is installed from the AUR to generate pywal gtk themes.]
     
     # Ranger related
   - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
@@ -221,6 +224,8 @@
     ~/.config/chromium-flags.conf: chromium-flags.conf
     /media/MD/Downloads/Torrents/torrench/config.ini: config.ini
     #/etc/environment: environment
+    ~/.gtkrc-2.0: .gtkrc-2.0
+    ~/.config/gtk-3.0/settings.ini: gtk3-settings.ini
     ~/.gitconfig: .gitconfig
     ~/.i3/i3blocks.conf: i3blocks.conf
     ~/.emacs.d/init.el: init.el
