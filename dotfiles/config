@@ -263,7 +263,9 @@ bar {
     }
 }
 
-bindsym $mod+shift+x exec i3lock-fancy lock
+#bindsym $mod+shift+x exec i3lock-fancy
+bindsym $mod+shift+x exec i3lock --clock --screen 1 --blur 5 --ringcolor 00000000 --insidecolor 00000000 --linecolor ffffffff --keyhlcolor 00000000 --timecolor ffffffff --datecolor ffffffff 
+#bindsym $mod+shift+x exec --no-startup-id $HOME/Documents/configs/dotfiles/lock.sh
 
 assign [class="firefox"] $workspace1
 assign [class="keepassxc"] $workspace9

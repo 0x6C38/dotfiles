@@ -195,12 +195,14 @@
     # [sudo systemctl start postgresql.service, Start the postgresql service to use it]
 
     # i3 related
-  - [pacaur -S neofetch           --needed --noconfirm --noedit, Making sure neofetch is installed from the AUR.]
+  - [pacaur      -S neofetch      --needed --noconfirm --noedit, Making sure neofetch is installed from the AUR.]
   - [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
   - [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
   - [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
   - [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
   - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
+
+  - [pacaur      -S i3lock-color  --needed --noconfirm --noedit, Making sure i3lock-color is installed from AUR.]
 
     # Pywal related
   - [pacaur      -S python-pywal  --needed --noconfirm --noedit, Making sure pywal is installed from the AUR.]
