@@ -64,7 +64,7 @@
     # Media related
   - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed.]
   - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed.]
-  - [pacaur      -S skypeforlinux-bin --needed --noconfirm --noedit, Making sure skype is installed from the AUR.]
+  - [pacaur      -S skypeforlinux-stable-bin --needed --noconfirm --noedit, Making sure skype is installed from the AUR.]
   - [pacaur      -S discord       --needed --noconfirm --noedit, Making sure discord is installed from the AUR.]
 
     # Read/Write/Related
