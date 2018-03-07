@@ -106,8 +106,9 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-# This outputs an error "gtk: Use -g to generate an oomox theme."
-(wal -t -g &)
+# This outputs an error "gtk: Use -g to generate an oomox theme when oomox not
+# installed and Loading oomox... + delay when installed."
+#(wal -t -g &)
 
 (neofetch &)
 
