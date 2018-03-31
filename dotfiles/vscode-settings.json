@@ -1,5 +1,6 @@
 {
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Quiet Light",
-    "window.menuBarVisibility": "toggle"
+    "window.menuBarVisibility": "toggle",
+    "window.smoothScrollingWorkaround": true
 }
