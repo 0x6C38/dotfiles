@@ -236,6 +236,7 @@
     ~/.gitconfig: .gitconfig
     ~/.i3/i3blocks.conf: i3blocks.conf
     ~/.emacs.d/init.el: init.el
+    ~/.config/neofetch/config.conf: neofetch.conf
     #/etc/locale.conf: locale.conf
     ~/.sbt/1.0/plugins/plugins.sbt: plugins.sbt
     #/etc/profile: profile
