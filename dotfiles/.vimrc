@@ -128,3 +128,5 @@ hi CursorLine term=bold cterm=bold
 " Select vertically
 " set cursorcolumn
 
+" this turns off physical line wrapping (ie: automatic insertion of newlines)
+set textwidth=0 wrapmargin=0
