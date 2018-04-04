@@ -143,7 +143,7 @@ npm() {
     npm "$@"
 }
 
-
+# npm must be loaded into the shell before using sls or any npm packages
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 ([[ -f /home/ds/.nvm/versions/node/v9.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/ds/.nvm/versions/node/v9.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh &)

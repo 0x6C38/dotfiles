@@ -133,9 +133,9 @@ set $workspace1 "1:"
 set $workspace2 "2:"
 set $workspace3 "3:"
 set $workspace8 "8:"
-set $workspace9 "9:"
+set $workspace9 "9:"
+set $workspace10 "10:"
 #set $workspace10 "10:"
-set $workspace10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -270,7 +270,7 @@ bindsym $mod+shift+x exec --no-startup-id i3lock --clock --screen 1 --blur 5 --r
 #bindsym $mod+shift+x exec --no-startup-id $HOME/Documents/configs/dotfiles/lock.sh
 
 assign [class="firefox"] $workspace1
-assign [class="keepassxc"] $workspace9
+assign [class="keepassxc"] $workspace10
 
 # exec_always feh --bg-scale ~/Documents/Themes/i3wm-themes/Space/Space.png
 # exec --no-startup-id wal -i $HOME/Pictures/Wallpapers
@@ -315,3 +315,4 @@ exec_always --no-startup-id termite --name termite_scratchpad
 for_window [instance="termite_scratchpad"] floating enable
 for_window [instance="termite_scratchpad"] move scratchpad
 bindsym $mod+shift+Return [instance="termite_scratchpad"] scratchpad show
+
