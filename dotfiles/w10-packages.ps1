@@ -43,6 +43,11 @@ choco install androidstudio -y
 choco install postgresql -y
 choco install pgadmin4 -y|
 
+## JS
+choco install nodejs -y
+choco install visualstudiocode -y
+npm -v
+npm install -g serverless
 
 choco install discord -y
 choco install skype -y (requires c++ redistributable packages)
