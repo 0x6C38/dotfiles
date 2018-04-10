@@ -30,9 +30,16 @@
 
     # Shell/Zsh related
   - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
+    #
+    ## oh-my-zsh: Method 1
+    ## This is problematic on arch for some reason
     #- [sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)", Curling oh-my-zsh]
     #- [sudo cp -r /root/.oh-my-zsh ~/, Copying oh-my-zsh from root to current user folder]
     #- [sudo git clone https://github.com/geometry-zsh/geometry $HOME/.oh-my-zsh/custom/themes, Cloning oh-my-zsh's geometry theme.]
+    #
+    ## oh-my-zsh: Method 2
+  - [pacaur      -S oh-my-zsh-git --needed --noconfirm --noedit, Making sure oh my zsh is installed from the AUR.]
+    ## Note: ~/.zshrc must point to the correct oh-my-zsh path
 
     # Language related
   - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
