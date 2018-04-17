@@ -56,7 +56,7 @@
   - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
   - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
   - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
-    #- [yaourt   -S gtop                              , Making sure gtop is installed]
+    #- [pacaur   -S gtop          --needed --noconfirm --noedit, Making sure gtop is installed]
   - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
   - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
   - [sudo pacman -S less          --needed --noconfirm, Making sure less is installed]
@@ -126,9 +126,24 @@
     #- [sudo mv /tmp/breeze/Breeze-Purple $HOME/.icons, Moving theme to icon folder.]
            
     # Virtualization related
+    ## Virtual Box
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
-    # sudo pacman linux-headers ?
-    #  - [sudo modprobe vboxdrv,                             Making sure modprobe vboxdrv is ok]
+
+    ## Virtual box extra dependencies
+  - [sudo pacman -S linux-headers --needed --noconfirm, Making sure header packages for kernel are installed in order to use virtualbox.]
+  - [sudo pacman -S virtualbox-host-modules-arch --needed --noconfirm, Installing extra vbox packages to make sure it works on arch.]
+  - [pacaur      -S virtualbox-ext-oracle --needed --noconfirm, Installing extra oracle proprietary vbox packages to make sure it works on arch.]
+
+  - [sudo pacman -S virtualbox-guest-iso --needed --noconfirm, Making sure guest additions iso is installed for usage in virtualbox.]
+    #  Must also insert guest additions iso located at /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+    #  There is a bug in ubuntu which can be fixed by installing gcc, make and perl (sudo apt-get install gcc make perl -y)
+
+    #  When using arch as a guest os, install the guest utils (sudo pacman -S virtualbox-guest-utils) along with the guest modules (sudo pacman -S virtualbox-guest-modules-arch)
+
+    #  In order to use a shared folder, it must be mounted in the guest os and the guest os user must be in the vboxsf group (sudo usermod -a -G vboxsf your_user_name)
+    #  It may be necessary to add your user in the host os to the vboxusers group if its not added as a side effect of the wheel group (sudo gpassd -a $USER vboxusers)
+    #  It may also be necessary to enable certain kernel modules by running (sudo modprobe vboxdrv vboxsf vboxvideo vboxnetflt vbox pci) etc.
+    #  It is also possible to have those run by default on startup by writing them to individual lines in a file loaded by systemd such as /etc/modules-load.d/virtualbox.conf
 
     # Development related
     # Scala/Java
@@ -151,6 +166,14 @@
     # Golang
   - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
 
+    # Utils
+  - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
+  - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
+
+    # IDEs & Editors
+    # Jetbrains
+  - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed from the AUR.]
+    # https://stackoverflow.com/questions/35911302/cannot-launch-emulator-on-linux-ubuntu-15-10
     # Utils
   - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
@@ -206,7 +229,7 @@
     # [sudo systemctl start postgresql.service, Start the postgresql service to use it]
 
     # i3 related
-  - [pacaur      -S neofetch      --needed --noconfirm --noedit, Making sure neofetch is installed from the AUR.]
+  - [sudo pacman -S neofetch      --needed --noconfirm, Making sure neofetch is installed from the AUR.]
   - [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
   - [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
   - [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
