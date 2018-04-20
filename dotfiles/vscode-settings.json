@@ -2,5 +2,7 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Quiet Light",
     "window.menuBarVisibility": "toggle",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
     "window.smoothScrollingWorkaround": true
 }
