@@ -107,14 +107,13 @@ alias -g ohmyzsh="vim ~/.oh-my-zsh"
 alias -g reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias -g ytp='youtube-dl -cio "%(playlist_index)s-%(title)s.%(ext)s" '
 alias -g lsn="ls --color=no"
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
 
 (if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi &)
-
-# Aliases
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

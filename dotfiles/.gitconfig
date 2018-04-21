@@ -1,6 +1,6 @@
 [user]
 	email = danilo_salvio@live.com
-	name = Mr-SD
+	name = Danilo_Salvio # Must not contain spaces on github
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [url "ssh://git@bitbucket.org/"]
