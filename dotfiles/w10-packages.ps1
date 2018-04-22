@@ -1,7 +1,3 @@
-## Changed passwords
-# daniloparaitcollege@gmail.com
-# danilouai
-
 ## Native packager
 # Add chocolatey provider
 # Get-PackageProvider -Name chocolatey
