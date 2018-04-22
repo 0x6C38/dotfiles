@@ -114,7 +114,7 @@ mode "$mode_input" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+space mode "$mode_input"
+bindsym $alt+space mode "$mode_input"
 
 exec fcitx
 
