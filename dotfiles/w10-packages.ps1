@@ -6,8 +6,8 @@
 # Add chocolatey provider
 # Get-PackageProvider -Name chocolatey
 
-install-package firefox
-install-package vlc
+# install-package firefox
+# install-package vlc
 
 ## Choco
 # Install choco as admin
@@ -21,6 +21,9 @@ choco install keepass.install -y
 
 choco install winrar -y
 choco install totalcommander -y
+
+choco install vim -y
+choco install neovim -y
 
 # Development related
 choco install git.install -y
@@ -57,5 +60,5 @@ choco install utorrent -y --ignore-checksums
 # Update all:
 choco update all -y
 
-#Remove package:
-choco uninstall nombre -y
+# Remove package:
+# choco uninstall packagename -y
