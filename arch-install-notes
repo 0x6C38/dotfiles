@@ -90,6 +90,7 @@ passwd root
 
 ## Configure sudo access
 pacman -S sudo
+# Already in dotfiles
 nano /etc/sudoers
 Uncomment %wheel ALL=(ALL) ALL
 gpasswd -a nuevoUsuario wheel
