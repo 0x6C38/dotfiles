@@ -26,12 +26,14 @@ arch-chroot /mnt
 passwd
 
 ## Set persistent locale (language)
-nano /etc/locale.gen
+nano /etc/locale.gen # Already included in dotfiles
 locale-gen
 
 ## Set persistent keyboard map layout
+# Is vconsole necessary?
 echo "KEYMAP=la-latin1" > /etc/vconsole.conf
-sudo nano /etc/X11/xorg.conf.d/10-keyboard.conf #Is it 00-keyboard.conf ??
+# Already included in dotfiles
+sudo nano /etc/X11/xorg.conf.d/00-keyboard.conf
 
 Section "InputClass"
         Identifier "system-keyboard"
@@ -67,6 +69,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 exit
 genfstab /mnt >> /mnt/etc/fstab
+# fstab is now included in dotfiles
 
 ## Reboot the system
 umount /mnt
@@ -74,6 +77,7 @@ reboot
 
 # Post-Install
 ## Configure pacman to not exclude 32 bit packages
+# Already in dotfiles
 nano /etc/pacman.conf
 [multilib]
 Include = /etc/pacman.d/mirrorlist
