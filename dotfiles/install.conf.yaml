@@ -252,6 +252,7 @@
 - link:
     ~/.dotfiles: ''
     /etc/X11/xorg.conf.d/20-amdgpu.conf: 20-amdgpu.conf
+    /etc/X11/xorg.conf.d/00-keyboard.conf: 00-keyboard.conf
     ~/.config/compton.conf: compton.conf
     ~/.i3/config: config
     ~/.config/chromium-flags.conf: chromium-flags.conf
