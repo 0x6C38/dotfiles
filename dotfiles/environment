@@ -5,12 +5,12 @@
 #
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 JDK_HOME="/usr/lib/jvm/java-8-openjdk"
-XDG_CONFIG_HOME="/media/MD/Downloads/Torrents/"
+# XDG_CONFIG_HOME="/media/MD/Downloads/Torrents/"
 # SPARK_HOME ="/opt/spark-2.1.0-bin-hadoop2.7/bin"
 
 # Are exports even necessary?
 export JAVA_HOME
-export XDG_CONFIG_HOME
+# export XDG_CONFIG_HOME
 
 LC_ALL=en_GB.UTF-8
 LANG=en_GB.UTF-8

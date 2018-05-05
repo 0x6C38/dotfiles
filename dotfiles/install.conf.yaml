@@ -251,7 +251,7 @@
 
 - link:
     ~/.dotfiles: ''
-    /etc/pacman.conf: pacman.conf
+    #/etc/pacman.conf: pacman.conf
     /etc/X11/xorg.conf.d/20-amdgpu.conf: 20-amdgpu.conf
     /etc/X11/xorg.conf.d/00-keyboard.conf: 00-keyboard.conf
     ~/.config/compton.conf: compton.conf
@@ -265,9 +265,9 @@
     ~/.i3/i3blocks.conf: i3blocks.conf
     ~/.emacs.d/init.el: init.el
     ~/.config/neofetch/config.conf: neofetch.conf
-    /etc/locale.gen: locale.gen
-    /etc/fstab: fstab
-    /etc/sudoers: sudoers
+    #/etc/locale.gen: locale.gen
+    #/etc/fstab: fstab
+    #/etc/sudoers: sudoers
     #/etc/locale.conf: locale.conf
     ~/.sbt/1.0/plugins/plugins.sbt: plugins.sbt
     #/etc/profile: profile
