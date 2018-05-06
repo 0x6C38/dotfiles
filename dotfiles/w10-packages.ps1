@@ -15,6 +15,8 @@ choco install youtube-dl -y
 choco install vlc -y
 choco install keepass.install -y
 
+choco install rufus -y
+
 choco install winrar -y
 choco install totalcommander -y
 
