@@ -23,6 +23,8 @@ choco install totalcommander -y
 choco install vim -y
 choco install neovim -y
 
+choco install virtualbox -y
+
 # Development related
 choco install git.install -y
 choco install poshgit -y
