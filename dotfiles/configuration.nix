@@ -85,7 +85,7 @@
   services.xserver.dpi = 157;
 
   services.xserver.windowManager.i3.enable = true;
-  #services.xserver.windowManager.i3.i3-gaps = true;
+  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
 
   # Enable the KDE Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
