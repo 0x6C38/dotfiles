@@ -1,0 +1,38 @@
+# This file needs to be run once as admin and once as regular user.
+- defaults:
+    link:
+      relink: true
+      force: true
+      create: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+
+- link:
+    ~/.dotfiles: ''
+    ~/.i3/config: config
+    ~/.config/chromium-flags.conf: chromium-flags.conf
+    ~/.gtkrc-2.0: .gtkrc-2.0
+    ~/.config/gtk-3.0/settings.ini: gtk3-settings.ini
+    ~/.gitconfig: .gitconfig
+    ~/.i3/i3blocks.conf: i3blocks.conf
+    ~/.emacs.d/init.el: init.el
+    ~/.config/neofetch/config.conf: neofetch.conf
+    ~/.sbt/1.0/plugins/plugins.sbt: plugins.sbt
+    ~/.config/ranger/rc.conf: rc.conf
+    ~/.config/ranger/rifle.conf: rifle.conf
+    ~/.config/ranger/bookmarks: ranger-bookmarks
+    ~/.config/rofi/config: rofi-conf
+    ~/.spacemacs: .spacemacs
+    ~/.vimrc: .vimrc
+    ~/.config/Code/User/settings.json: vscode-settings.json
+    ~/.config/Code/User/keybindings.json: vscode-keybindings.json
+    #/etc/xdg/termite/config: termite-config
+    #~/.xinitrc: .xinitrc
+    #~/.Xresources: .Xresources
+    ~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc
+    
