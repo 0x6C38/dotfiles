@@ -1,26 +1,17 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  # boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
-  # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nixDS"; # Define your hostname.
 
   # Select internationalisation properties.
   i18n = {
@@ -43,6 +34,9 @@
       powerline-fonts
     ];
   };
+  environment.variables.TERMINAL="termite";
+  environment.variables.EDITOR="vim";
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -64,27 +58,17 @@
 
   programs.zsh.enable = true;
   programs.zsh.interactiveShellInit = ''
+    export PATH="$PATH:$HOME/.npm-packages/bin"
     export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
 
     # Customize your oh-my-zsh options here
     ZSH_THEME="agnoster"
-    plugins=(git)
+    plugins=(git cp jump nyan globalias)
   
     source $ZSH/oh-my-zsh.sh
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.bash.enableCompletion = true;
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
