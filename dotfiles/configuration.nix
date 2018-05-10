@@ -37,8 +37,8 @@
   time.timeZone = "America/Argentina/Buenos_Aires";
 
   fonts = {
-    #enableFontDir = true;
-    #enableGhostscriptFonts = true;
+    enableFontDir = true;
+    enableGhostscriptFonts = true;
     fonts = with pkgs; [
       powerline-fonts
     ];
@@ -57,6 +57,9 @@
     nodejs-9_x
     oh-my-zsh zsh
     numlockx
+    i3status rofi
+    font-awesome-ttf
+    scala sbt openjdk
   ];
 
   programs.zsh.enable = true;
