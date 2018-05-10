@@ -47,7 +47,7 @@
     firefox
     python python36Packages.pip
     nox
-    feh imagemagick neofetch
+    feh imagemagick neofetch scrot
     nodejs-9_x
     oh-my-zsh zsh
     numlockx
