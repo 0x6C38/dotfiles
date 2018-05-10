@@ -54,6 +54,7 @@
     i3status rofi
     font-awesome-ttf
     scala sbt openjdk
+    ranger
   ];
 
   programs.zsh.enable = true;

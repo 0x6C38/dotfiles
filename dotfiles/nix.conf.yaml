@@ -9,6 +9,8 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  #- [npm install -g serverless, Installing serverless framework via node.]
+  #- [npm install -g aws-amplify, Installing aws-amplify via node.]
 
 
 - link:
@@ -35,6 +37,6 @@
     ~/.config/termite/config: termite-config
     #~/.xinitrc: .xinitrc
     #~/.Xresources: .Xresources
-    ~/.zprofile: .zprofile
-    ~/.zshrc: .zshrc
+    #~/.zprofile: .zprofile
+    #~/.zshrc: .zshrc
     
