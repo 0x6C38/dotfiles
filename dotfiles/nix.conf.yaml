@@ -31,7 +31,7 @@
     ~/.npmrc: .npmrc
     ~/.config/Code/User/settings.json: vscode-settings.json
     ~/.config/Code/User/keybindings.json: vscode-keybindings.json
-    #/etc/xdg/termite/config: termite-config
+    ~/.config/termite/config: termite-config
     #~/.xinitrc: .xinitrc
     #~/.Xresources: .Xresources
     ~/.zprofile: .zprofile
