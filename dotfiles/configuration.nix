@@ -36,16 +36,16 @@
   };
   environment.variables.TERMINAL="termite";
   environment.variables.EDITOR="vim";
+  environment.variables.PIP_TARGET="$HOME/.pip-packages";
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
+ environment.systemPackages = with pkgs; [
+    vlc
     wget curl
     vim
     termite
     git
     firefox
-    python python36Packages.pip
+    python36Packages.pip
     nox
     feh imagemagick neofetch scrot
     nodejs-9_x
@@ -55,12 +55,15 @@
     font-awesome-ttf
     scala sbt openjdk
     ranger
+    pywal
   ];
 
   programs.zsh.enable = true;
   programs.zsh.interactiveShellInit = ''
     export PATH="$PATH:$HOME/.npm-packages/bin"
     export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
+    export PIPMODULES=$HOME/.pip-packages
+    export PYTHONPATH=$PYTHONPATH:$PIPMODULES
 
     # Customize your oh-my-zsh options here
     ZSH_THEME="agnoster"
