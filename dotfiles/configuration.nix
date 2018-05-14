@@ -11,6 +11,8 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
+  nixpkgs.config.allowUnfree = true;
+
   networking.hostName = "nixDS"; # Define your hostname.
 
   # Select internationalisation properties.
@@ -51,11 +53,13 @@
     nodejs-9_x
     oh-my-zsh zsh
     numlockx
-    i3status rofi
+    i3status rofi i3blocks-gaps
     font-awesome-ttf
     scala sbt openjdk
     ranger
-    pywal
+    python python36
+    #pywal
+    #jetbrains.webstorm jetbrains.idea-ultimate
   ];
 
   programs.zsh.enable = true;
