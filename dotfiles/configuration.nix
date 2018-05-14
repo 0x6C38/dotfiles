@@ -11,7 +11,21 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
+  #boot.loader.grub.extraEntries = ''
+  #  menuentry "Windows 10" {
+  #    chainloader (hd1, 0)+1
+  #  }
+  #'';
+  
+  #fileSystems."/media/MD"=
+  #{ device = "/dev/disk/by-uuid/BEE4A15FE4A11B23";
+  #  fsType = "ntfs";
+  #}
+
   nixpkgs.config.allowUnfree = true;
+
+  #services.xserver.videoDrivers = ["ati_unfree"];
+  #hardware.opengl.driSupport32Bit = true;
 
   networking.hostName = "nixDS"; # Define your hostname.
 
@@ -49,7 +63,7 @@
     wget curl postman
     transmission
     less
-    vim
+    vim neovim
     termite
     git
     firefox #qutebrowser #chromium
