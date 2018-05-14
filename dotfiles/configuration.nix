@@ -41,15 +41,21 @@
   environment.variables.PIP_TARGET="$HOME/.pip-packages";
 
  environment.systemPackages = with pkgs; [
+    keepassxc
+    xsel
     vlc
-    wget curl
+    evince
+    htop
+    wget curl postman
+    transmission
+    less
     vim
     termite
     git
-    firefox
-    python36Packages.pip
+    firefox #qutebrowser #chromium
+    youtube-dl
     nox
-    feh imagemagick neofetch scrot
+    feh imagemagick neofetch scrot compton 
     nodejs-9_x
     oh-my-zsh zsh
     numlockx
@@ -57,9 +63,11 @@
     font-awesome-ttf
     scala sbt openjdk
     ranger
-    python python36
+    python python36Packages.pip
     #pywal
     #jetbrains.webstorm jetbrains.idea-ultimate
+    vscode
+    #android-studio
   ];
 
   programs.zsh.enable = true;
