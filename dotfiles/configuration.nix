@@ -82,6 +82,7 @@
     #jetbrains.webstorm jetbrains.idea-ultimate
     vscode
     #android-studio
+    pavucontrol
   ];
 
   programs.zsh.enable = true;
