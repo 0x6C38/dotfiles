@@ -11,16 +11,16 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  #boot.loader.grub.extraEntries = ''
-  #  menuentry "Windows 10" {
-  #    chainloader (hd1, 0)+1
-  #  }
-  #'';
+  boot.loader.grub.extraEntries = ''
+    menuentry "Windows 10" {
+      chainloader (hd2, 0)+1
+    }
+  '';
   
-  #fileSystems."/media/MD"=
-  #{ device = "/dev/disk/by-uuid/BEE4A15FE4A11B23";
-  #  fsType = "ntfs";
-  #}
+  fileSystems."/media/MD"=
+  { device = "/dev/disk/by-uuid/BEE4A15FE4A11B23";
+    fsType = "ntfs";
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -83,6 +83,7 @@
     vscode
     #android-studio
     pavucontrol
+    os-prober
   ];
 
   programs.zsh.enable = true;

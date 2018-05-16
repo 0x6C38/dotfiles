@@ -9,10 +9,11 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [sudo mkdir -p /media/MD, Making sure media drive mount directory exists.]
   #- [npm install -g serverless, Installing serverless framework via node.]
   #- [npm install -g aws-amplify, Installing aws-amplify via node.]
   #- [git clone https://github.com/NixOS/nixpkgs.git ~/nixpkgs-unstable, Cloning the unstable channel]
-  #- [nix-env -iA nixpkgs.pywal -f ~/nixpkgs-unstable, Installing pywal non declaratively since its not in the stable channel yet.]
+  #- [nix-env -iA pywal -f ~/nixpkgs-unstable, Installing pywal non declaratively since its not in the stable channel yet.]
 
 
 - link:
