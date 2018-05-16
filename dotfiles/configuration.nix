@@ -74,9 +74,8 @@
     ranger
     python python36Packages.pip
     #pywal
-    #jetbrains.webstorm jetbrains.idea-ultimate
+    jetbrains.webstorm jetbrains.idea-ultimate android-studio
     vscode
-    #android-studio
     pavucontrol
     os-prober
   ];
