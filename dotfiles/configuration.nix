@@ -93,6 +93,9 @@
     export PIPMODULES=$HOME/.pip-packages
     export PYTHONPATH=$PYTHONPATH:$PIPMODULES
 
+    (neofetch)
+    (cat ~/.cache/wal/sequences &)
+
     # Customize your oh-my-zsh options here
     ZSH_THEME="agnoster"
     plugins=(git cp jump nyan globalias)
