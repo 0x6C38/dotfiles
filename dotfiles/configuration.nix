@@ -19,7 +19,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  #services.xserver.videoDrivers = ["ati_unfree"];
+  services.xserver.videoDrivers = ["amdgpu-pro"];
   #hardware.opengl.driSupport32Bit = true;
 
   networking.hostName = "nixDS"; # Define your hostname.
