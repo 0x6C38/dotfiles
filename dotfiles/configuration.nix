@@ -43,6 +43,14 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       powerline-fonts
+
+      noto-fonts noto-fonts-cjk noto-fonts-emoji
+      liberation_ttf
+      fira fira-code fira-code-symbols
+      mplus-outline-fonts
+      dina-font
+      proggyfonts
+
     ];
   };
   environment.variables.TERMINAL="termite";
