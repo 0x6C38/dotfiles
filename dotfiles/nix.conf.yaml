@@ -20,6 +20,7 @@
     ~/.dotfiles: ''
     /etc/nixos/configuration.nix: configuration.nix
     ~/.i3/config: config
+    ~/.i3/i3blocks: i3blocks
     ~/.config/chromium-flags.conf: chromium-flags.conf
     ~/.gtkrc-2.0: .gtkrc-2.0
     ~/.config/gtk-3.0/settings.ini: gtk3-settings.ini
