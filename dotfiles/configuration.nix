@@ -50,6 +50,7 @@
       mplus-outline-fonts
       dina-font
       proggyfonts
+      font-awesome-ttf
 
     ];
   };
