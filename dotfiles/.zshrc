@@ -109,7 +109,7 @@ alias -g ytp='youtube-dl -cio "%(playlist_index)s-%(title)s.%(ext)s" '
 alias -g lsn="ls --color=no"
 alias -g pbcopy='xsel --clipboard --input'
 alias -g pbpaste='xsel --clipboard --output'
-alias -g sxiv='sxiv -s'
+alias -g sxiv='sxiv -s f'
 
 
 (if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
