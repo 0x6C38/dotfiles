@@ -72,7 +72,7 @@
     firefox #qutebrowser #chromium
     youtube-dl
     nox
-    feh imagemagick neofetch scrot compton 
+    feh imagemagick neofetch scrot compton sxiv
     nodejs-9_x
     oh-my-zsh zsh
     numlockx
