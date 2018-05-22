@@ -86,6 +86,7 @@
     vscode
     pavucontrol
     os-prober
+    awscli
   ];
 
   programs.zsh.enable = true;
