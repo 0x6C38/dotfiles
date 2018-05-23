@@ -231,7 +231,8 @@ bar {
 }
 
 #bindsym $mod+shift+x exec --no-startup-id i3lock-fancy
-bindsym $mod+shift+x exec --no-startup-id i3lock --clock --screen 1 --blur 5 --ringcolor 00000000 --insidecolor 00000000 --linecolor ffffffff --keyhlcolor 00000000 --timecolor ffffffff --datecolor ffffffff 
+bindsym $mod+shift+x exec --no-startup-id i3lock-color --clock --screen 1 --blur 5 --ringcolor 00000000 --insidecolor 00000000 --linecolor ffffffff --keyhlcolor 00000000 --timecolor ffffffff --datecolor ffffffff 
+#if not found use i3lock instead.
 #bindsym $mod+shift+x exec --no-startup-id $HOME/Documents/configs/dotfiles/lock.sh
 
 assign [class="firefox"] $workspace1

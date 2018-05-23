@@ -77,7 +77,7 @@
     nodejs-9_x
     oh-my-zsh zsh
     numlockx
-    i3status rofi i3blocks-gaps
+    i3status rofi i3blocks-gaps i3lock-color
     font-awesome-ttf
     scala sbt openjdk
     ranger
