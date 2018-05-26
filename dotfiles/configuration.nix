@@ -64,6 +64,7 @@
     vlc
     evince
     htop
+    tree
     wget curl postman
     transmission
     less
