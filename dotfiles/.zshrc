@@ -110,6 +110,7 @@ alias -g lsn="ls --color=no"
 alias -g pbcopy='xsel --clipboard --input'
 alias -g pbpaste='xsel --clipboard --output'
 alias -g sxiv='sxiv -s f'
+alias j='jump'
 
 
 (if [ $TILIX_ID ] || [ $VTE_VERSION ]; then

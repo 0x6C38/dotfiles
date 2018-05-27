@@ -22,13 +22,10 @@
   services.xserver.videoDrivers = ["amdgpu"];
   #hardware.opengl.driSupport32Bit = true;
 
-  networking.hostName = "nixDS"; # Define your hostname.
+  networking.hostName = "nixDS";
 
   # Select internationalisation properties.
   i18n = {
-  #  consoleFont = "Lat2-Terminus16";
-  #  consoleKeyMap = "la-latin1";
-  #  defaultLocale = "en_US.UTF-8";
      inputMethod = {
        enabled = "fcitx";
        fcitx.engines = with pkgs.fcitx-engines; [mozc];
@@ -115,7 +112,7 @@
     alias -g pbcopy='xsel --clipboard --input'
     alias -g pbpaste='xsel --clipboard --output'
     alias -g sxiv='sxiv -s f'
-
+    alias j='jump'
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
@@ -130,7 +127,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.layout = "latam";
-  #services.xserver.xkbOptions = "eurosign:e";
   services.xserver.dpi = 157;
 
   services.xserver.windowManager.i3.enable = true;
