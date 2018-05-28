@@ -263,6 +263,8 @@
     ~/.config/gtk-3.0/settings.ini: gtk3-settings.ini
     ~/.gitconfig: .gitconfig
     ~/.i3/i3blocks.conf: i3blocks.conf
+    ~/.i3/i3blocks: i3blocks
+    ~/.weechat: .weechat
     ~/.emacs.d/init.el: init.el
     ~/.config/neofetch/config.conf: neofetch.conf
     #/etc/locale.gen: locale.gen

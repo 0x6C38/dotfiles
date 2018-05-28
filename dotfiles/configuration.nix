@@ -54,6 +54,7 @@
   environment.variables.TERMINAL="termite";
   environment.variables.EDITOR="vim";
   environment.variables.PIP_TARGET="$HOME/.pip-packages";
+  environment.variables.BROWSER="firefox";
 
  environment.systemPackages = with pkgs; [
     keepassxc
@@ -70,6 +71,7 @@
     git
     firefox #qutebrowser #chromium
     youtube-dl
+    weechat
     nox
     feh imagemagick neofetch scrot compton sxiv
     nodejs-9_x
