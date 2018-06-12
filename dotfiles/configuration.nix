@@ -40,6 +40,7 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       powerline-fonts
+      font-awesome-ttf
 
       noto-fonts noto-fonts-cjk noto-fonts-emoji
       liberation_ttf
@@ -47,7 +48,8 @@
       mplus-outline-fonts
       dina-font
       proggyfonts
-      font-awesome-ttf
+      source-code-pro
+      hack-font
 
     ];
   };
@@ -79,7 +81,7 @@
     numlockx
     i3status rofi i3blocks-gaps i3lock-color
     font-awesome-ttf
-    scala sbt openjdk
+    scala sbt openjdk maven
     ranger
     python python36Packages.pip
     #pywal
