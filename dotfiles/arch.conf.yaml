@@ -61,6 +61,7 @@
   - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
   - [sudo pacman -S less          --needed --noconfirm, Making sure less is installed]
   - [sudo pacman -S rsync         --needed --noconfirm, Making sure rsync is installed]
+  - [sudo pacman -S fzf           --needed --noconfirm, Making sure fuzzy finder is installed]
 
     # Browser related
   - [sudo pacman -S archlinux-keyring --needed --noconfirm, Making sure keyring is installed for qutebrowser.]

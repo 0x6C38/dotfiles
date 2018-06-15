@@ -65,6 +65,7 @@
     evince
     htop
     tree
+    fzf
     wget curl postman
     transmission
     less
@@ -117,6 +118,10 @@
     alias -g pbpaste='xsel --clipboard --output'
     alias -g sxiv='sxiv -s f'
     alias j='jump'
+
+    # Fuzzy Finder
+    source "$(fzf-share)/key-bindings.zsh"
+    source "$(fzf-share)/completion.zsh"
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh

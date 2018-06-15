@@ -112,6 +112,10 @@ alias -g pbpaste='xsel --clipboard --output'
 alias -g sxiv='sxiv -s f'
 alias j='jump'
 
+# Fuzzy finder
+source "$(fzf-share)/key-bindings.zsh"
+source "$(fzf-share)/completion.zsh"
+
 
 (if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
