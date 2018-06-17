@@ -96,6 +96,7 @@
   - [sudo pacman -S ttf-fira-mono         --needed --noconfirm, Making sure ttf-fira-mono font pack is installed]
   - [sudo pacman -S ttf-freefont          --needed --noconfirm, Making sure ttf-freefont pack is installed]
   - [sudo pacman -S ttf-roboto            --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+  - [sudo pacman -S ttf-hack              --needed --noconfirm, Making sure ttf-hack font is installed]
     #  - [sudo pacman -S adobe-source-han-sans-otc-font   --needed --noconfirm, Making sure pan-cjk font pack is installed]
   - [sudo pacman -S adobe-source-han-serif-otc-fonts --needed --noconfirm, Making sure pan-cjk font pack is installed]
   - [sudo pacman -S noto-fonts-cjk        --needed --noconfirm, Making sure noto-fonts-cjk font pack is installed]

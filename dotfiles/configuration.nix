@@ -78,7 +78,7 @@
     nox
     feh imagemagick neofetch scrot compton sxiv
     nodejs-9_x
-    oh-my-zsh zsh
+    oh-my-zsh zsh 
     numlockx
     i3status rofi i3blocks-gaps i3lock-color
     font-awesome-ttf
@@ -122,6 +122,7 @@
     # Fuzzy Finder
     source "$(fzf-share)/key-bindings.zsh"
     source "$(fzf-share)/completion.zsh"
+
   '';
 
   programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
