@@ -188,11 +188,13 @@ bindsym $alt+space mode "$mode_input"
 
 
 ### Gap Mode
-set $mode_gaps Toggle gaps: (1) on (2) off
+set $mode_gaps Toggle gaps: [current] (1) on (2) off - [all] (3) off (4) on
 mode "$mode_gaps" {
 # all for every workspace, current for current
     bindsym 1 mode "default", gaps inner current set 15, gaps outer current set 12
-    bindsym 2 mode "default", gaps inner current set 1, gaps outer current set 1
+    bindsym 2 mode "default", gaps inner current set 0, gaps outer current set 0
+    bindsym 3 mode "default", gaps inner all set 15, gaps outer all set 12
+    bindsym 4 mode "default", gaps inner all set 0, gaps outer all set 0
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
