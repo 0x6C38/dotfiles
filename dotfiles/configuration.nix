@@ -91,6 +91,8 @@
     pavucontrol
     os-prober
     awscli
+    gnumake
+    gcc
   ];
 
   programs.zsh.enable = true;
