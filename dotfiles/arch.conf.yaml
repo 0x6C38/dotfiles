@@ -128,6 +128,10 @@
     #- [sudo mv /tmp/breeze/Breeze-Purple $HOME/.icons, Moving theme to icon folder.]
            
     # Virtualization related
+    ## Docker
+  - [sudo pacman -S docker        --needed --noconfirm, Making sure docker is installed]
+    # User needs to be added to docker group via sudo usermod -aG docker myuser (not recommended as its the equivalent of root) or docker must be used with sudo
+
     ## Virtual Box
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
 

@@ -91,8 +91,7 @@
     pavucontrol
     os-prober
     awscli
-    gnumake
-    gcc
+    gnumake gcc
   ];
 
   programs.zsh.enable = true;
@@ -148,11 +147,22 @@
   # services.xserver.displayManager.sddm.enable = true;
   # services.xserver.desktopManager.plasma5.enable = true;
 
+  # Docker
+  virtualisation.docker.enable = true;
+  
+  # VirtualBox
+  virtualisation.virtualbox.host.enable = true;
+
+  ## Enable the Oracle Extension Pack.
+  # nixpkgs.config.virtualbox.enableExtensionPack = true;
+  # Must predownload extension pack manually nix-prefetch-url http://download.virtualbox.org/virtualbox/5.2.8/Oracle_VM_VirtualBox_Extension_Pack-5.2.8.vbox-extpack
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.ds = {
      isNormalUser = true;
      home = "/home/ds";
-     extraGroups = ["wheel" "networkmanager"];
+     extraGroups = ["wheel" "networkmanager" "docker"];
      uid = 1000;
      shell = pkgs.zsh;
   };
