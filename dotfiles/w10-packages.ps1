@@ -22,6 +22,7 @@ choco install totalcommander -y
 
 choco install vim -y
 choco install neovim -y
+choco install fzf -y
 
 choco install virtualbox -y
 
