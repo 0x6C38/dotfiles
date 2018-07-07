@@ -10,6 +10,8 @@
 # https://chocolatey.org/install
 # Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+choco install cmdermini -y #C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml
+
 choco install firefox -y
 choco install youtube-dl -y
 choco install vlc -y
@@ -32,6 +34,8 @@ choco install virtualbox -y
 choco install git.install -y
 choco install poshgit -y
 choco install postman -y
+
+# choco install awscli -y #Error
 
 ## .NET
 choco install visualstudio2017community -y
