@@ -24,6 +24,8 @@ choco install vim -y
 choco install neovim -y
 choco install fzf -y
 
+choco install anki -y
+
 choco install virtualbox -y
 
 # Development related
