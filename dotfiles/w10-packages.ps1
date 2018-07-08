@@ -10,7 +10,12 @@
 # https://chocolatey.org/install
 # Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+# PowerShellGet / Gallery + Modules
+# Install-Module -Name PowerShellGet -Force
+# Install-Module -Name PSFzf
+
 choco install cmdermini -y #C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml
+choco install sudo -y
 
 choco install firefox -y
 choco install youtube-dl -y
