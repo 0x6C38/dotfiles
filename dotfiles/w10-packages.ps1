@@ -6,6 +6,7 @@
 # install-package vlc
 
 ## Choco
+# Config monitor for 59hz on video profile
 # Install choco as admin
 # https://chocolatey.org/install
 # Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
