@@ -28,6 +28,8 @@ choco install rufus -y
 choco install winrar -y
 choco install totalcommander -y
 
+choco install libreoffice-fresh -y
+
 choco install vim -y
 choco install neovim -y
 choco install fzf -y
