@@ -15,7 +15,7 @@
 # Install-Module -Name PowerShellGet -Force
 # Install-Module -Name PSFzf
 
-choco install cmdermini -y #C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml
+# choco install cmdermini -y #C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml # Laggs PC?
 choco install sudo -y
 
 choco install firefox -y
