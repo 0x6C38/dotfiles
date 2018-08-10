@@ -70,6 +70,8 @@ ZSH_THEME="wedisagree"
 plugins=(git cp jump nyan globalias)
 
 source $ZSH/oh-my-zsh.sh
+
+. ~/.cache/wal/colors.sh
 # source antigen.zsh
 # antigen theme funky
 # antigen theme frmendes/geometry

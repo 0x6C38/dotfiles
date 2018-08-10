@@ -110,6 +110,8 @@
   
     source $ZSH/oh-my-zsh.sh
 
+    . ~/.cache/wal/colors.sh
+
     alias -g zshconfig="vim ~/.zshrc"
     alias -g ohmyzsh="vim ~/.oh-my-zsh"
     alias -g reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
