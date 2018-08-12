@@ -121,6 +121,8 @@
     alias -g pbpaste='xsel --clipboard --output'
     alias -g sxiv='sxiv -s f'
     alias j='jump'
+    alias gc-nix="sudo nix-channel --update && sudo nix-env -u --always && sudo rm /nix/var/nix/gcroots/auto/* && sudo nix-collect-garbage -d"
+    # https://nixos.org/nixos/nix-pills/garbage-collector.html
 
     # Fuzzy Finder
     source "$(fzf-share)/key-bindings.zsh"
