@@ -22,7 +22,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run -font "System San Francisco Display 18"
-bindsym $mod+d exec rofi -show combi -lines 5 -eh 2 -separator-style none -hide-scrollbar true -fullscreen true -bw 0 -font "Hack 14"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -separator-style none -hide-scrollbar true -fullscreen true -bw 0 -font "Hack 14"
+bindsym $mod+Shift+d exec rofi -show combi -lines 5 -eh 2 -separator-style none -hide-scrollbar true -fullscreen true -bw 0 -font "Hack 14"
 
 # Drag windows
 floating_modifier $alt
