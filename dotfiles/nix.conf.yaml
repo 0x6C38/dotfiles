@@ -15,6 +15,10 @@
   #- [git clone https://github.com/NixOS/nixpkgs.git ~/nixpkgs-unstable, Cloning the unstable channel]
   #- [nix-env -iA pywal -f ~/nixpkgs-unstable, Installing pywal non declaratively since its not in the stable channel yet.]
 
+    # Git related
+  - [./concat-gitignore.sh                                       , Making sure global gitignore is up to date.]
+    #- [git config --global core.excludesfile ~/.gitignore_global, Making sure git is configured to use the global gitignore file.]
+
 
 - link:
     ~/.dotfiles: ''
@@ -26,6 +30,7 @@
     ~/.gtkrc-2.0: .gtkrc-2.0
     ~/.config/gtk-3.0/settings.ini: gtk3-settings.ini
     ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
     ~/.i3/i3blocks.conf: i3blocks.conf
     ~/.emacs.d/init.el: init.el
     ~/.config/neofetch/config.conf: neofetch.conf

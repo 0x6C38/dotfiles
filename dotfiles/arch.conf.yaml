@@ -63,6 +63,10 @@
   - [sudo pacman -S rsync         --needed --noconfirm, Making sure rsync is installed]
   - [sudo pacman -S fzf           --needed --noconfirm, Making sure fuzzy finder is installed]
 
+    # Git related
+  - [./concat-gitignore.sh                                       , Making sure global gitignore is up to date.]
+    #- [git config --global core.excludesfile ~/.gitignore_global, Making sure git is configured to use the global gitignore file.]
+
     # Browser related
   - [sudo pacman -S archlinux-keyring --needed --noconfirm, Making sure keyring is installed for qutebrowser.]
   - [sudo pacman -S qutebrowser   --needed --noconfirm, Making sure qutebrowser is installed.]
@@ -273,6 +277,8 @@
     ~/.weechat: .weechat
     ~/.emacs.d/init.el: init.el
     ~/.config/neofetch/config.conf: neofetch.conf
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
     #/etc/locale.gen: locale.gen
     #/etc/fstab: fstab
     #/etc/sudoers: sudoers
