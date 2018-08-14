@@ -84,7 +84,7 @@
     font-awesome-ttf
     scala sbt openjdk maven
     ranger
-    python python36Packages.pip
+    python python3 python36Packages.pip
     #pywal
     jetbrains.webstorm jetbrains.idea-ultimate android-studio
     vscode
