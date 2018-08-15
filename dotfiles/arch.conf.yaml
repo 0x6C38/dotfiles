@@ -63,6 +63,8 @@
   - [sudo pacman -S rsync         --needed --noconfirm, Making sure rsync is installed]
   - [sudo pacman -S fzf           --needed --noconfirm, Making sure fuzzy finder is installed]
 
+  - [pacaur      -S dtrx          --needed --noconfirm, Making sure dtrx (archive extraction utility is installed from the AUR.]
+
     # Git related
   - [./concat-gitignore.sh                                       , Making sure global gitignore is up to date.]
     #- [git config --global core.excludesfile ~/.gitignore_global, Making sure git is configured to use the global gitignore file.]

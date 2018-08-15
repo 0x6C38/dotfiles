@@ -92,6 +92,7 @@
     os-prober
     awscli
     gnumake gcc
+    dtrx
   ];
 
   programs.zsh.enable = true;
