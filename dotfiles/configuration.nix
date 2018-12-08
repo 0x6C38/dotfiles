@@ -83,6 +83,7 @@
     i3status rofi i3blocks-gaps i3lock-color
     font-awesome-ttf
     scala sbt openjdk maven
+    #stack
     ranger
     python python3 python36Packages.pip
     #pywal

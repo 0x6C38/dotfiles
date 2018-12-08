@@ -275,6 +275,8 @@ exec fcitx
 # Using a custom title string with criteria is deliberate and keeps things simple.
 exec_always --no-startup-id termite --name termite_scratchpad
 for_window [instance="termite_scratchpad"] floating enable
+for_window [instance="termite_scratchpad"] floating resize set 1280 720
 for_window [instance="termite_scratchpad"] move scratchpad
+
 bindsym $mod+shift+Return [instance="termite_scratchpad"] scratchpad show
 
