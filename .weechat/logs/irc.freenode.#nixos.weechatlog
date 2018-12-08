@@ -1,0 +1,10 @@
+2018-05-27 21:59:06	-->	Guest56143 (~ds@190.55.178.241) has joined #nixos
+2018-05-27 21:59:06	--	Topic for #nixos is "NixOS 18.03 and Nix 2.0 are released! || Share the output of nix-shell -p nix-info --run nix-info to help us help you. || https://nixos.org || Latest NixOS: https://nixos.org/nixos/download.html || Latest Nix: https://nixos.org/nix/download.html || Logs: https://logs.nix.samueldr.com/nixos/ || #nixos-dev, #nix-darwin, #nixos-aarch64, #nixos-chat"
+2018-05-27 21:59:06	--	Topic set by gchristensen (~gchristen@unaffiliated/grahamc) on Wed, 04 Apr 2018 09:29:39
+2018-05-27 21:59:07	--	Channel #nixos: 850 nicks (0 ops, 0 voices, 850 normals)
+2018-05-27 21:59:08	--	Channel created on Fri, 25 Apr 2008 09:32:07
+2018-05-27 22:00:16	-->	emmanuelrosa (~emmanuel@47.205.129.54) has joined #nixos
+2018-05-27 22:02:12	Judson	How do I tell a NixOps logical server what its IP address is?
+2018-05-27 22:02:17	<--	sanscoeur (~sanscoeur@c-98-207-189-213.hsd1.ca.comcast.net) has quit (Ping timeout: 245 seconds)
+2018-05-27 22:03:02	-->	semilattice (~quassel@2600:1700:5390:7ae0:1592:ae08:a03a:fc1b) has joined #nixos
+2018-05-27 22:03:25	--	irc: disconnected from server

@@ -1,0 +1,89 @@
+2018-05-27 21:58:16	--	irc: connecting to server irc.freenode.org/6667...
+2018-05-27 21:58:17	--	irc: connected to irc.freenode.org/6667 (139.162.227.51)
+2018-05-27 21:58:17	--	niven.freenode.net: *** Looking up your hostname...
+2018-05-27 21:58:17	--	niven.freenode.net: *** Checking Ident
+2018-05-27 21:58:18	--	niven.freenode.net: *** Couldn't look up your hostname
+2018-05-27 21:58:26	--	niven.freenode.net: *** No Ident response
+2018-05-27 21:58:26	--	Welcome to the freenode Internet Relay Chat Network ds
+2018-05-27 21:58:26	--	Your host is niven.freenode.net[139.162.227.51/6667], running version ircd-seven-1.1.7
+2018-05-27 21:58:26	--	This server was created Sun May 20 2018 at 18:26:43 UTC
+2018-05-27 21:58:26	--	niven.freenode.net ircd-seven-1.1.7 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2018-05-27 21:58:26	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2018-05-27 21:58:26	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 SAFELIST ELIST=CTU CPRIVMSG :are supported by this server
+2018-05-27 21:58:26	--	CNOTICE WHOX ETRACE KNOCK :are supported by this server
+2018-05-27 21:58:26	--	There are 116 users and 85353 invisible on 34 servers
+2018-05-27 21:58:26	--	30 :IRC Operators online
+2018-05-27 21:58:26	--	21 :unknown connection(s)
+2018-05-27 21:58:26	--	45272 :channels formed
+2018-05-27 21:58:26	--	I have 3980 clients and 1 servers
+2018-05-27 21:58:26	--	3980 4432 :Current local users 3980, max 4432
+2018-05-27 21:58:26	--	85469 92940 :Current global users 85469, max 92940
+2018-05-27 21:58:26	--	Highest connection count: 4433 (4432 clients) (102201 connections received)
+2018-05-27 21:58:26	--	- niven.freenode.net Message of the Day -
+2018-05-27 21:58:26	--	- Welcome to niven.freenode.net in London, United Kingdom, EU.
+2018-05-27 21:58:26	--	- thanks to Linode for sponsoring this server!
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- NIVEN, LAWRENCE VAN COTT [1938-].  Architect of Known Space,
+2018-05-27 21:58:26	--	- the setting of Protector, World of Ptaavs and the
+2018-05-27 21:58:26	--	- Ringworld series.  Author of "Flash Crowd", a canonical
+2018-05-27 21:58:26	--	- sociological hard science fiction short story dealing with
+2018-05-27 21:58:26	--	- effects of near instantaneous transportation on a modern
+2018-05-27 21:58:26	--	- technological society.  In addition, he is well known for his
+2018-05-27 21:58:26	--	- collaborations with Jerry Pournelle, including The Mote in
+2018-05-27 21:58:26	--	- God's Eye and Lucifer's Hammer.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- Welcome to freenode - supporting the free and open source
+2018-05-27 21:58:26	--	- software communities since 1998.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- By connecting to freenode you indicate that you have read and
+2018-05-27 21:58:26	--	- accept our policies and guidelines as set out on https://freenode.net
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- In the event that you observe behaviour that contravenes our policies,
+2018-05-27 21:58:26	--	- please notify a volunteer staff member via private message, or send us an
+2018-05-27 21:58:26	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2018-05-27 21:58:26	--	- situation within a reasonable period of time, and we may request further
+2018-05-27 21:58:26	--	- information or, as appropriate, involve other parties such as channel operators
+2018-05-27 21:58:26	--	- Group Contacts representing an on-topic group.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- freenode runs an open proxy scanner.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- If you are looking for assistance, you will be able to find a list of
+2018-05-27 21:58:26	--	- volunteer staff using the '/who freenode/staff/*' command, and you may
+2018-05-27 21:58:26	--	- message any of us at any time. Please note that freenode predominantly
+2018-05-27 21:58:26	--	- provides assistance via private message, and while we have a network
+2018-05-27 21:58:26	--	- channel the primary venue for support requests is via private message to
+2018-05-27 21:58:26	--	- a member of the volunteer staff team.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- From time to time, volunteer staff may send server-wide notices relating to
+2018-05-27 21:58:26	--	- the project, or the communities that we host. The majority of such notices
+2018-05-27 21:58:26	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2018-05-27 21:58:26	--	- do not miss them. Important messages relating to the freenode project, including
+2018-05-27 21:58:26	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2018-05-27 21:58:26	--	- global notices.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- Representing an on-topic project? Don't forget to register, more information
+2018-05-27 21:58:26	--	- can be found on the https://freenode.net website under "Group Registration".
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- freenode organises an annual conference, and we would like to extend our
+2018-05-27 21:58:26	--	- thanks to the attendees, exhibitors and speakers who made freenode #live 2017
+2018-05-27 21:58:26	--	- possible. And of course, our generous sponsors: Bytemark, Canonical (Ubuntu),
+2018-05-27 21:58:26	--	- Falanx Cyber Security, Private Internet Access and Yubico for footing the bill.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2018-05-27 21:58:26	--	- network going for close to two decades.
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- freenode #live returns to Bristol, UK on November 3rd-4th 2018. Our Call for
+2018-05-27 21:58:26	--	- Proposals is live at https://freenode.live and open until July 31, 2018. If
+2018-05-27 21:58:26	--	- you are interested in sponsoring this event, please send an e-mail to
+2018-05-27 21:58:26	--	- sponsor@freenode.live
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	- Thank you for using freenode!
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	-
+2018-05-27 21:58:26	--	End of /MOTD command.
+2018-05-27 21:58:26	--	User mode [+i] by ds
+2018-05-27 21:58:35	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2018-05-27 21:58:35	--	NickServ (NickServ@services.): You have 30 seconds to identify to your nickname before it is changed.
+2018-05-27 21:58:53	--	NickServ (NickServ@services.): You failed to identify in time for the nickname ds
+2018-05-27 21:58:53	--	You are now known as Guest56143
+2018-05-27 22:03:25	--	irc: disconnected from server
