@@ -1,7 +1,8 @@
 
-~$*
-*~
 # =========================
+*~
+~$*
+$RECYCLE.BIN/
 # Android Studio captures folder
 # Android Studio Navigation editor temp files
 *.ap_
@@ -172,7 +173,6 @@ publish/
 # Publish Web Output
 *.Publish.xml
 _Pvt_Extensions/
-$RECYCLE.BIN/
 # Recycle Bin used on file shares
 _ReSharper*/
 # ReSharper is a .NET coding add-in

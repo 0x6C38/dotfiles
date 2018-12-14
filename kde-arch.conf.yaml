@@ -1,0 +1,304 @@
+# This file needs to be run once as admin and once as regular user.
+- defaults:
+    link:
+      relink: true
+      force: true
+      create: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+    # System related
+  - [sudo pacman -S pacaur        --needed --noconfirm, Making sure pacaur is installed]
+  - [sudo pacman -S numlockx      --needed --noconfirm, Making sure numlockx is installed]
+  - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
+  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
+
+    # GPU drivers
+    #- [sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon --needed --noconfirm, Making sure open source AMD drivers are installed.]
+
+    # Clipboard related
+    # Copy stuff to clipboard. Usage: something | xsel --clipboard --input
+  - [sudo pacman -S xsel          --needed --noconfirm, Making sure xsel is installed]
+    #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
+
+    ## Audio related
+    #  - [sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib3-alsa-plugins --needed --noconfirm, Making sure audio stuff is installed]
+    #  - [sudo pacman -S pavucontrol   --needed --noconfirm, Making sure pavucontrol is installed]
+
+    # Shell/Zsh related
+  - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
+    #
+    ## oh-my-zsh: Method 1
+    ## This is problematic on arch for some reason
+    #- [sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)", Curling oh-my-zsh]
+    #- [sudo cp -r /root/.oh-my-zsh ~/, Copying oh-my-zsh from root to current user folder]
+    #- [sudo git clone https://github.com/geometry-zsh/geometry $HOME/.oh-my-zsh/custom/themes, Cloning oh-my-zsh's geometry theme.]
+    #
+    ## oh-my-zsh: Method 2
+  - [pacaur      -S oh-my-zsh-git --needed --noconfirm --noedit, Making sure oh my zsh is installed from the AUR.]
+    ## Note: ~/.zshrc must point to the correct oh-my-zsh path
+
+    # Language related
+  - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
+  - [sudo pacman -S fcitx-mozc           --needed --noconfirm, Making sure fcitx-mozc is installed]
+  - [sudo pacman -S fcitx-configtool     --needed --noconfirm, Making sure fcitx-configtool is installed]
+
+    # Keepass related
+    #- [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
+    #- [yaourt      -S xdotools      --needed --noconfirm, Making sure xdotools(keepass dependency) is installed]
+  - [sudo pacman -S keepassxc     --needed --noconfirm, Making sure keepassxc is installed]
+
+
+    # General
+  - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
+  - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
+  - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
+    #- [pacaur   -S gtop          --needed --noconfirm --noedit, Making sure gtop is installed]
+  - [sudo pacman -S curl          --needed --noconfirm, Making sure curl is installed]
+  - [sudo pacman -S wget          --needed --noconfirm, Making sure wget is installed]
+  - [sudo pacman -S less          --needed --noconfirm, Making sure less is installed]
+  - [sudo pacman -S rsync         --needed --noconfirm, Making sure rsync is installed]
+  - [sudo pacman -S fzf           --needed --noconfirm, Making sure fuzzy finder is installed]
+
+  - [pacaur      -S dtrx          --needed --noconfirm, Making sure dtrx (archive extraction utility is installed from the AUR.]
+
+    # Git related
+  - [./concat-gitignore.sh                                       , Making sure global gitignore is up to date.]
+    #- [git config --global core.excludesfile ~/.gitignore_global, Making sure git is configured to use the global gitignore file.]
+
+    # Browser related
+    #- [sudo pacman -S archlinux-keyring --needed --noconfirm, Making sure keyring is installed for qutebrowser.]
+    #- [sudo pacman -S qutebrowser   --needed --noconfirm, Making sure qutebrowser is installed.]
+    #- [sudo pacman -S chromium      --needed --noconfirm, Making sure chromium is installed.]
+    #- [pacaur -S chromium-widevine  --needed --noconfirm --noedit, Making sure widevine is installed to watch netflix on chromium.]
+  - [sudo pacman -S firefox       --needed --noconfirm, Making sure firefox is installed.]
+
+    # Media related
+  - [sudo pacman -S vlc           --needed --noconfirm, Making sure vlc is installed.]
+  - [sudo pacman -S youtube-dl    --needed --noconfirm, Making sure youtube-dl is installed.]
+  - [pacaur      -S skypeforlinux-stable-bin --needed --noconfirm --noedit, Making sure skype is installed from the AUR.]
+  - [pacaur      -S discord       --needed --noconfirm --noedit, Making sure discord is installed from the AUR.]
+
+    # Read/Write/Related
+    # Readers
+    #- [sudo pacman -S evince                --needed --noconfirm, Making sure evince pdf/general reader is installed]
+  - [sudo pacman -S phonon-qt5-gstreamer  --needed --noconfirm, Making sure phonon gstreamer (okular dependency) is installed]
+  - [sudo pacman -S okular                --needed --noconfirm, Making sure Okular pdf/general reader with qt dependencies is installed]
+
+    # Emacs related
+    #- [sudo pacman -S emacs         --needed --noconfirm, Making sure emacs is installed]
+    ##- [sudo rm -r ~/.emacs.d                ,  Deleting vanilla emacs config] 
+    ##- [git clone "https://github.com/syl20bnr/spacemacs" "~/.emacs.d", Making sure spacemacs is installed]
+  - [sudo pacman -S adobe-source-code-pro-fonts --needed, Making sure adobe fonts is installed]
+
+    # Fonts
+  - [sudo pacman -S ttf-dejavu            --needed --noconfirm, Making sure ttf-dejavu font pack is installed]
+  - [sudo pacman -S ttf-anonymous-pro     --needed --noconfirm, Making sure ttf-anonymous font pack is installed]
+  - [sudo pacman -S ttf-bitstream-vera    --needed --noconfirm, Making sure ttf-bitstream-vera font pack is installed]
+  - [sudo pacman -S ttf-droid             --needed --noconfirm, Making sure ttf-droid font pack is installed]
+  - [sudo pacman -S ttf-fira-mono         --needed --noconfirm, Making sure ttf-fira-mono font pack is installed]
+  - [sudo pacman -S ttf-freefont          --needed --noconfirm, Making sure ttf-freefont pack is installed]
+  - [sudo pacman -S ttf-roboto            --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+  - [sudo pacman -S ttf-hack              --needed --noconfirm, Making sure ttf-hack font is installed]
+    #  - [sudo pacman -S adobe-source-han-sans-otc-font   --needed --noconfirm, Making sure pan-cjk font pack is installed]
+  - [sudo pacman -S adobe-source-han-serif-otc-fonts --needed --noconfirm, Making sure pan-cjk font pack is installed]
+  - [sudo pacman -S noto-fonts-cjk        --needed --noconfirm, Making sure noto-fonts-cjk font pack is installed]
+  - [sudo pacman -S otf-ipafont           --needed --noconfirm, Making sure ttf-roboto font pack is installed]
+  - [sudo pacman -S ttf-hanazono          --needed --noconfirm, Making sure ttf-hanazono font pack is installed]
+  - [sudo pacman -S ttf-sazanami          --needed --noconfirm, Making sure ttf-sazanami font pack is installed]
+  - [sudo pacman -S font-mathematica      --needed --noconfirm, Making sure font-mathematic is installed]
+  - [pacaur -S otf-font-awesome           --needed --noconfirm --noedit, Making sure font awesome is installed from the AUR.]
+    #- ["git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts/", "Cloning powerline fonts."]
+    #- [~/fonts/install.sh, Installing powerline fonts.]
+    #- [rm -rf fonts, Cleaning up powerline fonts install.]
+
+    # Cursor related
+    #- [rm -r $HOME/Downloads/gh-repos/breeze-cursors, Removes old copy of repo if it exists.]
+    #- [git clone https://github.com/thegreatyellow67/Breeze-Serie-for-Righties-Cursors $HOME/Downloads/gh-repos/breeze-cursors, Cloning Breeze cursors.]
+    #- [rm -r /tmp/breeze, Removing temp directory in case it exists.]
+    #- [mkdir /tmp/breeze, Creating temp directory for cursors.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Blue.tgz -C /tmp/breeze, Extracting (breeze-blue) icon theme.]
+    #- [sudo mv /tmp/breeze/Breeze-Blue $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Obsidian.tgz -C /tmp/breeze, Extracting (breeze-obsidian) icon theme.]
+    #- [sudo mv /tmp/breeze/Breeze-Obsidian $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Snow.tgz -C /tmp/breeze, Extracting (breeze-snow) icon theme.]
+    #- [sudo mv /tmp/breeze/Breeze-Snow $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Red.tgz -C /tmp/breeze, Extracting (breeze-snow) icon theme.]
+    #- [sudo mv /tmp/breeze/Breeze-Red $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Turquoise.tgz -C /tmp/breeze, Extracting (breeze-turquoise) icon theme.]
+    #- [sudo mv /tmp/breeze/Breeze-Turquoise $HOME/.icons, Moving theme to icon folder.]
+    #- [sudo tar -xvzf $HOME/Downloads/gh-repos/breeze-cursors/Breeze-Purple.tgz -C /tmp/breeze, Extracting (breeze-purple) icon theme.]
+    #- [sudo mv /tmp/breeze/Breeze-Purple $HOME/.icons, Moving theme to icon folder.]
+           
+    # Virtualization related
+    ## Docker
+  - [sudo pacman -S docker        --needed --noconfirm, Making sure docker is installed]
+    # User needs to be added to docker group via sudo usermod -aG docker myuser (not recommended as its the equivalent of root) or docker must be used with sudo
+
+    ## Virtual Box
+  - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
+
+    ## Virtual box extra dependencies
+    #- [sudo pacman -S linux-headers --needed --noconfirm, Making sure header packages for kernel are installed in order to use virtualbox.]
+    #- [sudo pacman -S virtualbox-host-modules-arch --needed --noconfirm, Installing extra vbox packages to make sure it works on arch.]
+    #- [pacaur      -S virtualbox-ext-oracle --needed --noconfirm, Installing extra oracle proprietary vbox packages to make sure it works on arch.]
+
+    #- [sudo pacman -S virtualbox-guest-iso --needed --noconfirm, Making sure guest additions iso is installed for usage in virtualbox.]
+    #  Must also insert guest additions iso located at /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
+    #  There is a bug in ubuntu which can be fixed by installing gcc, make and perl (sudo apt-get install gcc make perl -y)
+
+    #  When using arch as a guest os, install the guest utils (sudo pacman -S virtualbox-guest-utils) along with the guest modules (sudo pacman -S virtualbox-guest-modules-arch)
+
+    #  In order to use a shared folder, it must be mounted in the guest os and the guest os user must be in the vboxsf group (sudo usermod -a -G vboxsf your_user_name)
+    #  It may be necessary to add your user in the host os to the vboxusers group if its not added as a side effect of the wheel group (sudo gpassd -a $USER vboxusers)
+    #  It may also be necessary to enable certain kernel modules by running (sudo modprobe vboxdrv vboxsf vboxvideo vboxnetflt vbox pci) etc.
+    #  It is also possible to have those run by default on startup by writing them to individual lines in a file loaded by systemd such as /etc/modules-load.d/virtualbox.conf
+
+    # Development related
+    # Scala/Java
+  - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
+  - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
+  - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk is installed]
+
+    # Python
+  - [sudo pacman -S python        --needed --noconfirm, Making sure python is installed]
+  - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
+
+    # Nodejs
+  - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
+  - [sudo pacman -S npm           --needed --noconfirm, Making sure node package manager is installed]
+  - [pacaur      -S nvm           --needed --noconfirm --noedit, Making sure node version manager is installed from the AUR.]
+    #- [curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash, Installing nvm via curl in case AUR package doesn't work. Requires restart after installation.]
+  - [nvm install node, Making sure node is installed from the node version manager.]
+  - [npm install serverless -g, Making sure serverless framework is globally installed from through npm.]
+
+    # Golang
+  - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
+
+    # Utils
+  - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
+  - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
+
+    # IDEs & Editors
+    # Jetbrains
+  - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed from the AUR.]
+    # https://stackoverflow.com/questions/35911302/cannot-launch-emulator-on-linux-ubuntu-15-10
+    #- [pacaur -S     android-studio --needed --noconfirm --noedit, Making sure android-studio is installed from the AUR.]
+
+    # VS Code
+    # Extensions can be listed via code --list-extensions and installed via code --install-extension {ext1}. Maybe manage extensions here in the future.
+  - [pacaur -S visual-studio-code-bin --needed --noconfirm --noedit, Making sure visual studio code is installed from the AUR with shortcut name code.]
+    
+    # Extensions
+  - [code --install-extension thekalinga.bootstrap4-vscode, Making sure vscode bootstrap4 extension is installed.]
+  - [code --install-extension HookyQR.beautify, Making sure vscode beautify extension is installed.]
+  - [code --install-extension abusaidm.html-snippets, Making sure vscode html snippets extension is installed.]
+  - [code --install-extension alefragnani.project-manager, Making sure vscode project management extension is installed.]
+  - [code --install-extension christian-kohler.path-intellisense, Making sure vscode path intellisense extension is installed.]
+  - [code --install-extension dbaeumer.vscode-eslint, Making sure vsccode ESLint extension is installed.]
+  - [npm install -g eslint, Making sure ESLint is installed as a npm global dependency as well.]
+
+
+    # Elastic Search
+    #- [sudo pacman -S elasticsearch --needed --noconfirm, Making sure elastic search is installed]
+    #- [sudo pacman -S kibana        --needed --noconfirm, Making sure kibana (elastic search dashboard) is installed.]
+    #- [sudo /usr/share/elasticsearch/bin/elasticsearch-plugin remove analysis-kuromoji, Removing kuromoji search plugin so that it will remain updated if there is a new elasticsearch version.]
+    #- [sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji, Making sure elastic search kuromoji plugin is installed.]
+    ## sudo systemctl start elasticsearch.service
+    ## sudo systemctl start kibana.service
+
+    # Databases related
+
+    ## MongoDB
+    # systemctl start mongodb.service | to start the service
+    # systemctl enable mongodb.service | to autostart on bootup
+    # default port for mongo is 27017
+    #- [sudo pacman -S mongodb       --needed --noconfirm, Making sure mongodb is installed]
+    #- [pacaur -S mongodb-compass    --needed --noconfirm --noedit, Making sure mongodb-compass is installed from the AUR.]
+
+    ## Postgresql
+    # Default port for postgres is 5432. User: postgres, no password.
+    #- [sudo pacman -S postgresql    --needed --noconfirm,          Making sure postgres is installed]
+    #- [pacaur -S pgadmin4           --needed --noconfirm --noedit, Making sure pgadmin4 is installed from the AUR.]
+    
+    # Must initialize postgresql after installation
+    # sudo -u postgres -i
+    # initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
+    # exit
+    # sudo systemctl enable postgresql.service
+    
+    # [sudo systemctl start postgresql.service, Start the postgresql service to use it]
+
+    # i3 related
+  - [sudo pacman -S neofetch      --needed --noconfirm, Making sure neofetch is installed from the AUR.]
+    #- [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
+    #- [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
+    #- [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
+    #- [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
+    #- [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
+
+    #- [pacaur      -S i3lock-color  --needed --noconfirm --noedit, Making sure i3lock-color is installed from AUR.]
+
+    # Pywal related
+  - [sudo pacman    -S python-pywal  --needed --noconfirm,          Making sure pywal is installed.]
+    #- [pacaur      -S oomox         --needed --noconfirm --noedit, Making sure oomox is installed from the AUR to generate pywal gtk themes.]
+
+    # Notes: In order to get pywal working with gtk oomox must be installed and it requires python2 to be installed as well. Finally it is also necessary
+    # to configure gtk2 and gtk3 to use the generated wal theme. Firefox seems to pick the# gtk theme by default but chrome only seems to do so when set to use gtk
+    # is set. It may also be necessary to configure ~/.config/chromium/Default/User StyleSheets/Custom.css as per pywal doc but there is something weird about that 
+    # file so it can't be handled normally and included here.
+    
+    # Ranger related
+  - [sudo pacman -S ranger        --needed --noconfirm, Making sure ranger is installed]
+  - [sudo pacman -S w3m           --needed --noconfirm, Making sure w3m (ranger dependency) is installed]
+    #- [sudo pacman -S trash-cli     --needed --noconfirm, Making sure trash-cli (ranger dependency) is installed] #Either conflict or corrupt package
+
+    #- [sudo pacman -S transmission-cli       --needed --noconfirm, Making sure transmission is installed]
+    #- [sudo pip3 install --upgrade torrench                   , Making sure torrench is is installed]
+
+   
+
+- link:
+    ~/.dotfiles: ''
+    #/etc/pacman.conf: pacman.conf
+    #/etc/X11/xorg.conf.d/20-amdgpu.conf: 20-amdgpu.conf
+    /etc/X11/xorg.conf.d/00-keyboard.conf: 00-keyboard.conf
+    #~/.config/compton.conf: compton.conf
+    #~/.i3/config: config
+    ~/.config/chromium-flags.conf: chromium-flags.conf
+    #/media/MD/Downloads/Torrents/torrench/config.ini: config.ini
+    #/etc/environment: environment
+    ~/.gtkrc-2.0: .gtkrc-2.0
+    ~/.config/gtk-3.0/settings.ini: gtk3-settings.ini
+    ~/.gitconfig: .gitconfig
+    #~/.i3/i3blocks.conf: i3blocks.conf
+    #~/.i3/i3blocks: i3blocks
+    ~/.weechat: .weechat
+    ~/.emacs.d/init.el: init.el
+    ~/.config/neofetch/config.conf: neofetch.conf
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
+    #/etc/locale.gen: locale.gen
+    #/etc/fstab: fstab
+    #/etc/sudoers: sudoers
+    #/etc/locale.conf: locale.conf
+    #~/.sbt/1.0/plugins/plugins.sbt: plugins.sbt
+    #/etc/profile: profile
+    ~/.config/ranger/rc.conf: rc.conf
+    ~/.config/ranger/rifle.conf: rifle.conf
+    ~/.config/ranger/bookmarks: ranger-bookmarks
+    ~/.config/rofi/config: rofi-conf
+    #~/.ssh: .ssh
+    ~/.spacemacs: .spacemacs
+    ~/.vimrc: .vimrc
+    ~/.config/Code/User/settings.json: vscode-settings.json
+    ~/.config/Code/User/keybindings.json: vscode-keybindings.json
+    /etc/xdg/termite/config: termite-config
+    #~/.xinitrc: .xinitrc
+    #~/.Xresources: .Xresources
+    #~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc
+    
