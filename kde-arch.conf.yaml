@@ -157,6 +157,9 @@
     #  It may also be necessary to enable certain kernel modules by running (sudo modprobe vboxdrv vboxsf vboxvideo vboxnetflt vbox pci) etc.
     #  It is also possible to have those run by default on startup by writing them to individual lines in a file loaded by systemd such as /etc/modules-load.d/virtualbox.conf
 
+    # Flatpak
+  - [sudo pacman -S flatpak       --needed --noconfirm, Making sure flatpak is installed]
+
     # Development related
     # Scala/Java
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]

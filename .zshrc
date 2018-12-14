@@ -8,7 +8,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
+  export ZSH=/usr/share/oh-my-zsh
 #  source "$HOME/.cache/wal/colors.sh" # Exports wal colors, comment if not used
 
 # Import colorscheme from 'wal' asynchronously
