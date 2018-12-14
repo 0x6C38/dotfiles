@@ -14,7 +14,7 @@
   - [sudo pacman -S pacaur        --needed --noconfirm, Making sure pacaur is installed]
   - [sudo pacman -S numlockx      --needed --noconfirm, Making sure numlockx is installed]
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
-  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]
+  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed] # sudo os-prober && grub-mkconfig -o /boot/grub/grub.cfg
 
     # GPU drivers
   - [sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon --needed --noconfirm, Making sure open source AMD drivers are installed.]
