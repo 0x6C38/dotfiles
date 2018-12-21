@@ -173,6 +173,8 @@
   - [sudo pacman -S python        --needed --noconfirm, Making sure python is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
 
+  - [sudo pip install awscli      , Making sure the aws cli installed using pip]
+
     # Nodejs
   - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
   - [sudo pacman -S npm           --needed --noconfirm, Making sure node package manager is installed]
