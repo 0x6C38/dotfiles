@@ -242,9 +242,9 @@ assign [class="firefox"] $workspace1
 assign [class="keepassxc"] $workspace10
 
 # Applies pywal theme to intellij
-exec --no-startup-id "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2018.2/config;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.WebStorm2018.2/config"
+exec --no-startup-id "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2018.3/config;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.WebStorm2018.3/config"
 
-bindsym $mod+Print exec "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2018.2/config;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.WebStorm2018.2/config"
+bindsym $mod+Print exec "wal -g -i $HOME/Pictures/Wallpapers;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.IntelliJIdea2018.3/config;/media/MD/Development/Projects/Bash/intellijPywal/intellijPywalGen.sh  $HOME/.WebStorm2018.3/config"
 
 
 # Window configuration

@@ -181,6 +181,10 @@
     # Golang
   - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
 
+    # Haskell
+  - [sudo pacman -S stack         --needed --noconfirm, Making sure (haskell) stack is installed]
+  - [sudo pacman -S ghc          --needed --noconfirm, Making sure the haskell compiller is installed]
+
     # Utils
   - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
@@ -188,6 +192,7 @@
     # IDEs & Editors
     # Jetbrains
   - [pacaur -S intellij-idea-ultimate-edition --needed --noconfirm --noedit, Making sure intellij is installed from the AUR.]
+  - [pacaur -S webstorm                       --needed --noconfirm --noedit, Making sure webstorm is installed from the AUR.]
     # https://stackoverflow.com/questions/35911302/cannot-launch-emulator-on-linux-ubuntu-15-10
     #- [pacaur -S     android-studio --needed --noconfirm --noedit, Making sure android-studio is installed from the AUR.]
 
@@ -237,11 +242,11 @@
 
     # i3 related
   - [sudo pacman -S neofetch      --needed --noconfirm, Making sure neofetch is installed from the AUR.]
-    #- [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
+  - [sudo pacman -S feh           --needed --noconfirm, Making sure feh is installed]
     #- [sudo pacman -S scrot         --needed --noconfirm, Making sure scrot is installed]
     #- [sudo pacman -S rofi          --needed --noconfirm, Making sure rofi  is installed]
     #- [sudo pacman -S compton       --needed --noconfirm, Making sure compton is installed]
-    #- [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
+  - [sudo pacman -S imagemagick   --needed --noconfirm, Making sure imagemagick is installed]
 
     #- [pacaur      -S i3lock-color  --needed --noconfirm --noedit, Making sure i3lock-color is installed from AUR.]
 

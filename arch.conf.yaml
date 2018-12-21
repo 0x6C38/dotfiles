@@ -180,6 +180,11 @@
 
     # Golang
   - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
+    
+    # Haskell
+  - [sudo pacman -S stack         --needed --noconfirm, Making sure (haskell) stack is installed]
+  - [sudo pacman -S ghc          --needed --noconfirm, Making sure the haskell compiller is installed]
+
 
     # Utils
   - [pacaur      -S postman       --needed --noconfirm --noedit, Making sure postman is installed]
