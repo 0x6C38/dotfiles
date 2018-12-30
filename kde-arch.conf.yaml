@@ -46,7 +46,8 @@
     # Language related
   - [sudo pacman -S fcitx-im 1 2 3 4 5   --needed --noconfirm, Making sure fcitx-im is installed]
   - [sudo pacman -S fcitx-mozc           --needed --noconfirm, Making sure fcitx-mozc is installed]
-  - [sudo pacman -S fcitx-configtool     --needed --noconfirm, Making sure fcitx-configtool is installed]
+    #- [sudo pacman -S fcitx-configtool     --needed --noconfirm, Making sure fcitx-configtool is installed] # Doesn't work on kde?
+  - [sudo pacman -S kcm-fcitx            --needed --noconfirm, Making sure fcitx kde config tool is installed]
 
     # Keepass related
     #- [sudo pacman -S keepass       --needed --noconfirm, Making sure keepass is installed]
