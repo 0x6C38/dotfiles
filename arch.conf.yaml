@@ -26,6 +26,7 @@
     # Copy stuff to clipboard. Usage: something | xsel --clipboard --input
   - [sudo pacman -S xsel          --needed --noconfirm, Making sure xsel is installed]
     #  - [sudo pacman -S xclip         --needed --noconfirm, Making sure xclip is installed]
+  - [sudo pacman -S qrencode      --needed --noconfirm, Making sure qrencode is installed]
 
     ## Audio related
     #  - [sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib3-alsa-plugins --needed --noconfirm, Making sure audio stuff is installed]

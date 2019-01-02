@@ -61,6 +61,7 @@
  environment.systemPackages = with pkgs; [
     keepassxc
     xsel
+    #qrencode
     vlc
     evince
     htop
