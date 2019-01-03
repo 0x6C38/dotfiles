@@ -113,6 +113,7 @@ alias -g pbcopy='xsel --clipboard --input'
 alias -g pbpaste='xsel --clipboard --output'
 alias -g sxiv='sxiv -s f'
 alias j='jump'
+alias qre="xsel --clipboard --output | qrencode -s 30 -o ~/Pictures/tmpqr.png && feh ~/Pictures/tmpqr.png"
 
 # Fuzzy finder
 source "$(fzf-share)/key-bindings.zsh"

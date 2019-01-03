@@ -126,6 +126,7 @@
     alias j='jump'
     alias gc-nix="sudo nix-channel --update && sudo nix-env -u --always && sudo rm /nix/var/nix/gcroots/auto/* && sudo nix-collect-garbage -d"
     # https://nixos.org/nixos/nix-pills/garbage-collector.html
+    alias qre="xsel --clipboard --output | qrencode -s 30 -o ~/Pictures/tmpqr.png && feh ~/Pictures/tmpqr.png"
 
     # Fuzzy Finder
     source "$(fzf-share)/key-bindings.zsh"
