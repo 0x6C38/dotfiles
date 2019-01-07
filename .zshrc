@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias -g zshconfig="vim ~/.zshrc"
 alias -g ohmyzsh="vim ~/.oh-my-zsh"
-alias -g reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias -g ytp='youtube-dl -cio "%(playlist_index)s-%(title)s.%(ext)s" '
 alias -g lsn="ls --color=no"
 alias -g pbcopy='xsel --clipboard --input'
