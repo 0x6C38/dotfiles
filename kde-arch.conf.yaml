@@ -148,11 +148,11 @@
   - [sudo pacman -S virtualbox    --needed --noconfirm, Making sure virtualbox is installed]
 
     ## Virtual box extra dependencies
-    #- [sudo pacman -S linux-headers --needed --noconfirm, Making sure header packages for kernel are installed in order to use virtualbox.]
-    #- [sudo pacman -S virtualbox-host-modules-arch --needed --noconfirm, Installing extra vbox packages to make sure it works on arch.]
-    #- [pacaur      -S virtualbox-ext-oracle --needed --noconfirm, Installing extra oracle proprietary vbox packages to make sure it works on arch.]
+  - [sudo pacman -S linux-headers --needed --noconfirm, Making sure header packages for kernel are installed in order to use virtualbox.]
+  - [sudo pacman -S virtualbox-host-modules-arch --needed --noconfirm, Installing extra vbox packages to make sure it works on arch.]
+  - [pacaur      -S virtualbox-ext-oracle --needed --noconfirm, Installing extra oracle proprietary vbox packages to make sure it works on arch.]
 
-    #- [sudo pacman -S virtualbox-guest-iso --needed --noconfirm, Making sure guest additions iso is installed for usage in virtualbox.]
+  - [sudo pacman -S virtualbox-guest-iso --needed --noconfirm, Making sure guest additions iso is installed for usage in virtualbox.]
     #  Must also insert guest additions iso located at /usr/lib/virtualbox/additions/VBoxGuestAdditions.iso
     #  There is a bug in ubuntu which can be fixed by installing gcc, make and perl (sudo apt-get install gcc make perl -y)
 
@@ -162,6 +162,12 @@
     #  It may be necessary to add your user in the host os to the vboxusers group if its not added as a side effect of the wheel group (sudo gpassd -a $USER vboxusers)
     #  It may also be necessary to enable certain kernel modules by running (sudo modprobe vboxdrv vboxsf vboxvideo vboxnetflt vbox pci) etc.
     #  It is also possible to have those run by default on startup by writing them to individual lines in a file loaded by systemd such as /etc/modules-load.d/virtualbox.conf
+
+    ## Vagrant
+  - [sudo pacman -S vagrant      --needed --noconfirm, Making sure vagrant is installed]
+
+    ## Ansible
+  - [sudo pacman -S ansible      --needed --noconfirm, Making sure ansible is installed]
 
     # Flatpak
   - [sudo pacman -S flatpak       --needed --noconfirm, Making sure flatpak is installed]

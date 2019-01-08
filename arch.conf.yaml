@@ -163,6 +163,12 @@
     #  It may also be necessary to enable certain kernel modules by running (sudo modprobe vboxdrv vboxsf vboxvideo vboxnetflt vbox pci) etc.
     #  It is also possible to have those run by default on startup by writing them to individual lines in a file loaded by systemd such as /etc/modules-load.d/virtualbox.conf
 
+    ## Vagrant
+  - [sudo pacman -S vagrant      --needed --noconfirm, Making sure vagrant is installed]
+
+    ## Ansible
+  - [sudo pacman -S ansible      --needed --noconfirm, Making sure ansible is installed]
+
     # Flatpak
   - [sudo pacman -S flatpak       --needed --noconfirm, Making sure flatpak is installed]
   - [flatpak install flathub com.discordapp.Discord,    Making sure discord is installed from flatpak]
