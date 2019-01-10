@@ -116,8 +116,10 @@ alias j='jump'
 alias qre="xsel --clipboard --output | qrencode -s 30 -o ~/Pictures/tmpqr.png && feh ~/Pictures/tmpqr.png"
 
 # Fuzzy finder
-source "$(fzf-share)/key-bindings.zsh"
-source "$(fzf-share)/completion.zsh"
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/completion.zsh"
+  source "$(fzf-share)/key-bindings.zsh"
+fi
 
 
 (if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
