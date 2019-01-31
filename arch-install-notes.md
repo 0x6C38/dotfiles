@@ -32,15 +32,63 @@
 ## Install arch itself
 
     pacstrap /mnt base base-devel
-    arch-chroot /mnt
-    passwd
 
-## Set persistent locale (system language)
+## Create fstab file
+
+    genfstab /mnt >> /mnt/etc/fstab # dotfiles for reference
+
+## Switch into arch
+
+    arch-chroot /mnt
+
+## Build the linux kernell (not needed)
+
+    mkinitcpio -p linux
+
+## Configure users
+    passwd root # sets root password
+    useradd -m -g users -s /bin/bash nuevoUsuario (m crear home dir, g agregar al grupo de usuarios) # creates a user
+    passwd nuevoUsuario # sets new user password
+
+## Install bootloader in order to be able to start up
+
+    pacman -S grub-bios os-prober
+    os-prober (should detect other operating systems)
+    grub-install /dev/sda
+    grub-mkconfig -o /boot/grub/grub.cfg
+    
+## Reboot the system
+    exit
+    umount /mnt
+    reboot
+
+# Post-Installation: Basic Config
+## Set persistent network configuration
+
+    systemctl enable dhcpcd
+## Set host name for the computer
+
+    echo nombreMaquina > /etc/hostname
+
+## Configure sudo access
+### Install sudo itself
+
+    pacman -S sudo
+
+### Make the wheel group sudoers
+
+    nano /etc/sudoers # see dotfiles for reference
+**Uncomment `%wheel ALL=(ALL) ALL`**
+
+### Grant sudo access
+    gpasswd -a nuevoUsuario wheel # add desired users to wheel
+
+## Set a persistent locale (system language)
 
     nano /etc/locale.gen # Already included in dotfiles
     locale-gen
 
-## Set persistent keyboard map layout
+## Set a persistent keyboard map layout
 
     echo "KEYMAP=la-latin1" > /etc/vconsole.conf # not latam
     sudo nano /etc/X11/xorg.conf.d/00-keyboard.conf
@@ -55,7 +103,7 @@
     EndSection
 
 
-## Set persistent time configuration
+## Set a persistent time configuration
     rm /etc/localtime
     ln -s /usr/share/zoneInfo/America... /etc/localtime
     sudo pacman -S ntp
@@ -65,33 +113,6 @@ Reference:
 - https://wiki.archlinux.org/index.php/time
 - https://www.techgainer.com/fix-windows-showing-wrong-time-in-linux-windows-dual-boot-system/
 - https://bbs.archlinux.org/viewtopic.php?id=167407
-
-## Set host name for computer
-
-    echo nombreMaquina > /etc/hostname
-
-## Install bootloader in order to be able to start up
-pacman -S grub-bios os-prober
-os-prober (should detect other operating systems)
-grub-install /dev/sda
-
-## Build the linux kernell
-
-    mkinitcpio -p linux
-    grub-mkconfig -o /boot/grub/grub.cfg
-
-    exit
-    genfstab /mnt >> /mnt/etc/fstab # dotfiles for reference
-
-## Reboot the system
-
-    umount /mnt
-    reboot
-
-# Post-Install
-## Set persistent network configuration
-
-    sudo systemctl enable dhcpcd
 
 ## Configure Pacman
 ### Include 32 bit packages
@@ -111,25 +132,14 @@ grub-install /dev/sda
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch
 
+#### Sync changes
+    
+    sudo pacman -Sy
+
 #### Install and sync yaourt itself
 
     sudo pacman -Syu yaourt
     yaourt -Syu
-
-### Sync changes
-    
-    sudo pacman -Sy
-
-## Add a user
-    useradd -m -g users -s /bin/bash nuevoUsuario (m crear home dir, g agregar al grupo de usuarios)
-    passwd nuevoUsuario
-    passwd root
-
-## Configure sudo access
-pacman -S sudo
-nano /etc/sudoers # see dotfiles for reference
-Uncomment %wheel ALL=(ALL) ALL
-gpasswd -a nuevoUsuario wheel
 
 ## Set numlock on boot
 There are two components to having the numpad activated on boot. The first is the console activation which can be done by:
@@ -151,7 +161,7 @@ And the second is the display manager's activation. In case of X.org, numpadx ca
 Reference:
  - https://wiki.archlinux.org/index.php/Activating_Numlock_on_Bootup
 
-## Install 
+## Post-Install: UI
 sudo pacman -S ntp dbus avahi cups
 systemctl enable ntpd
 systemctl enable avahi-daemon
@@ -168,8 +178,9 @@ sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseau
 sudo pacman -S pavucontrol
 pavucontrol (configure)
 
-## i3wm setup
-pacman -S xorg-server xorg-xinit xorg-apps (xorg-apps replaces xorg-server-utils and xorg-utils)
+## Xorg Setup
+
+    pacman -S xorg-server xorg-xinit xorg-apps # (xorg-apps replaces xorg-server-utils and xorg-utils)
 
 ### Install apps
 pacman -S xorg-twm xorg-xclock xterm dmenu i3status i3blocks
@@ -197,14 +208,14 @@ startx
 configure i3 to open a different terminal
 
 # Sources
-    https://wiki.archlinux.org/index.php/installation_guide
+- https://wiki.archlinux.org/index.php/installation_guide
 
-    https://www.youtube.com/watch?v=lizdpoZj_vU
-    https://www.youtube.com/watch?v=GCUmGtCYPWM
+- https://www.youtube.com/watch?v=lizdpoZj_vU
+- https://www.youtube.com/watch?v=GCUmGtCYPWM
 
-    https://www.youtube.com/watch?v=Wqh9AQt3nho
-    https://www.youtube.com/watch?v=P4IV5BYPiPs
-    https://www.youtube.com/watch?v=5Idf4lFsmx0
+- https://www.youtube.com/watch?v=Wqh9AQt3nho
+- https://www.youtube.com/watch?v=P4IV5BYPiPs
+- https://www.youtube.com/watch?v=5Idf4lFsmx0
 
 
 # Messy notes
@@ -213,12 +224,6 @@ timedatectl set-timezone America/Argentina/Buenos_Aires (setea la timezone corre
 timedatectl set-ntp true
 timedatectl status (muestra el estado)
 
-genfstab -U -p /mnt >> /mnt/etc/fstab (genera un archivo con la informacion de las particiones)
-
-pacman -S grub-bios linux-headers linux-lts linux-lts-headers -y
-vi /etc/locale.gen (descomentar el idioma ? buscado -sacar el #-)
-locale-gen (genera la configuracion en base al archivo)
-# ln -s /usr/share/zoneinfo/America/ Crear el archivo del local si es que no esta
 hwclock --systohc --utc (sincroniza el reloj)
 
 grub-install --target=i386-pc --recheck /dev/sda (instala el bootloader)
