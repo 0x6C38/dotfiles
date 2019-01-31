@@ -1,62 +1,74 @@
 # Pre-Install
-## Set temporary keymap for keyboard and check internet connection
-loadkeys la-latin1
-ping -c 3 google.com
-dhcpcd??
+## Set temporary keymap for keyboard
+
+    loadkeys la-latin1
+    
+
+## Check network configuration
+
+    ping -c 3 google.com
+    # If necessary, fix connection issues by running: dhcpcd
 
 ## Disk partitioning
 ### Check which drive is which
-fdisk -l
 
-### Create partition table
-cfdisk /dev/sda (filesystem + swap)
+    fdisk -l
+
+### Create the partition table
+
+    cfdisk /dev/sda (filesystem + swap)
 
 ### Format file system drive & mount
-mkfs.ext4 /dev/sda1 (filesystem)
-mount /dev/sda1 /mnt
+
+    mkfs.ext4 /dev/sda1 (filesystem)
+    mount /dev/sda1 /mnt
 
 ### Format swap drive and set as swap
-mkswap /dev/sda2
-swapon /dev/sda2
+
+    mkswap /dev/sda2
+    swapon /dev/sda2
 
 # Instalation
 ## Install arch itself
-pacstrap /mnt base base-devel
-arch-chroot /mnt
-passwd
 
-## Set persistent locale (language)
-nano /etc/locale.gen # Already included in dotfiles
-locale-gen
+    pacstrap /mnt base base-devel
+    arch-chroot /mnt
+    passwd
+
+## Set persistent locale (system language)
+
+    nano /etc/locale.gen # Already included in dotfiles
+    locale-gen
 
 ## Set persistent keyboard map layout
-# Is vconsole necessary?
-echo "KEYMAP=la-latin1" > /etc/vconsole.conf
-# Already included in dotfiles
-sudo nano /etc/X11/xorg.conf.d/00-keyboard.conf
 
-Section "InputClass"
-        Identifier "system-keyboard"
-        MatchIsKeyboard "on"
-        Option "XkbLayout"  "latam"
-        Option "XkbModel"   "pc104"
-        Option "XkbVariant" "deadtilde,dvorak"
-        Option "XkbOptions" "grp:alt_shift_toggle"
-EndSection
+    echo "KEYMAP=la-latin1" > /etc/vconsole.conf # not latam
+    sudo nano /etc/X11/xorg.conf.d/00-keyboard.conf
+
+    Section "InputClass"
+       Identifier "system-keyboard"
+       MatchIsKeyboard "on"
+       Option "XkbLayout"  "latam"
+       Option "XkbModel"   "pc104"
+       Option "XkbVariant" "deadtilde,dvorak"
+       Option "XkbOptions" "grp:alt_shift_toggle"
+    EndSection
 
 
 ## Set persistent time configuration
-rm /etc/localtime
-ln -s /usr/share/zoneInfo/America... /etc/localtime
-sudo pacman -S ntp
-sudo ntpd -qg
+    rm /etc/localtime
+    ln -s /usr/share/zoneInfo/America... /etc/localtime
+    sudo pacman -S ntp
+    sudo ntpd -qg
 
-https://wiki.archlinux.org/index.php/time
-https://www.techgainer.com/fix-windows-showing-wrong-time-in-linux-windows-dual-boot-system/
-https://bbs.archlinux.org/viewtopic.php?id=167407
+Reference:
+- https://wiki.archlinux.org/index.php/time
+- https://www.techgainer.com/fix-windows-showing-wrong-time-in-linux-windows-dual-boot-system/
+- https://bbs.archlinux.org/viewtopic.php?id=167407
 
 ## Set host name for computer
-echo nombreMaquina > /etc/hostname
+
+    echo nombreMaquina > /etc/hostname
 
 ## Install bootloader in order to be able to start up
 pacman -S grub-bios os-prober
@@ -64,34 +76,58 @@ os-prober (should detect other operating systems)
 grub-install /dev/sda
 
 ## Build the linux kernell
-mkinitcpio -p linux
-grub-mkconfig -o /boot/grub/grub.cfg
 
-exit
-genfstab /mnt >> /mnt/etc/fstab
-# fstab is now included in dotfiles
+    mkinitcpio -p linux
+    grub-mkconfig -o /boot/grub/grub.cfg
+
+    exit
+    genfstab /mnt >> /mnt/etc/fstab # dotfiles for reference
 
 ## Reboot the system
-umount /mnt
-reboot
+
+    umount /mnt
+    reboot
 
 # Post-Install
-## Configure pacman to not exclude 32 bit packages
-# Already in dotfiles
-nano /etc/pacman.conf
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-SigLevel = PackageRequired TrustedOnly
+## Set persistent network configuration
+
+    sudo systemctl enable dhcpcd
+
+## Configure Pacman
+### Include 32 bit packages
+
+    nano /etc/pacman.conf # uncomment multilib
+
+    [multilib]
+    Include = /etc/pacman.d/mirrorlist
+    SigLevel = PackageRequired TrustedOnly
+
+### Enable yaourt
+#### Edit package manager file
+
+    nano /etc/pacman.conf # add fr packages source which includes yaourt
+
+    [archlinuxfr]
+    SigLevel = Never
+    Server = http://repo.archlinux.fr/$arch
+
+#### Install and sync yaourt itself
+
+    sudo pacman -Syu yaourt
+    yaourt -Syu
+
+### Sync changes
+    
+    sudo pacman -Sy
 
 ## Add a user
-useradd -m -g users -s /bin/bash nuevoUsuario (m crear home dir, g agregar al grupo de usuarios)
-passwd nuevoUsuario
-passwd root
+    useradd -m -g users -s /bin/bash nuevoUsuario (m crear home dir, g agregar al grupo de usuarios)
+    passwd nuevoUsuario
+    passwd root
 
 ## Configure sudo access
 pacman -S sudo
-# Already in dotfiles
-nano /etc/sudoers
+nano /etc/sudoers # see dotfiles for reference
 Uncomment %wheel ALL=(ALL) ALL
 gpasswd -a nuevoUsuario wheel
 
@@ -125,18 +161,6 @@ systemctl enable org.cups.cupsd.service
 nano /etc/ntp.conf
 ??
 hwclock
-
-## Enable yaourt
-### Edit package manager file
-nano /etc/pacman.conf
-
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
-
-### Install and sync yaourt itself
-sudo pacman -Syu yaourt
-yaourt -Syu
 
 ## Audio setup
 Something here made it work:
