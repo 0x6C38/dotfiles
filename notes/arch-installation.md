@@ -247,8 +247,6 @@ hwclock --systohc --utc (sincroniza el reloj)
 grub-install --target=i386-pc --recheck /dev/sda (instala el bootloader)
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 grub-mkconfig -o /boot/grub/grub.cfg
-umount /mnt
-reboot (existing OS)
 
 --Post-install
 localectl set-locale LANG="en_GB.UTF-8" (setea el locale de nuevo para algunas aplicaciones que no funcionan correctamente)
