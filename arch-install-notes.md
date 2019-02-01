@@ -53,6 +53,7 @@
 ## Install bootloader in order to be able to start up
 
     pacman -S grub-bios os-prober
+    # mkdir -p /media/OtherDrive && mount /dev/sdb1 /media/OtherDrive # mount drive with another OS for dual booting
     os-prober (should detect other operating systems)
     grub-install /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
@@ -161,7 +162,7 @@ And the second is the display manager's activation. In case of X.org, numpadx ca
 Reference:
  - https://wiki.archlinux.org/index.php/Activating_Numlock_on_Bootup
 
-# Post-Installation: Sound & Graphics
+ ## Other Stuff
 sudo pacman -S ntp dbus avahi cups
 systemctl enable ntpd
 systemctl enable avahi-daemon
@@ -172,11 +173,13 @@ nano /etc/ntp.conf
 ??
 hwclock
 
+# Post-Installation: Sound & Graphics
 ## Audio setup
-Something here made it work:
-sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib32-alsa-plugins
-sudo pacman -S pavucontrol
-pavucontrol (configure)
+
+    sudo pacman -S alsa-firmware alsa-lib alsa-plugins alsa-tools alsa-utils pulseaudio-alsa lib32-alsa-lib lib32-alsa-plugins
+    sudo pacman -S pavucontrol
+    # restart?
+    pavucontrol # configure
 
 ## Xorg Setup
 
@@ -212,6 +215,15 @@ pavucontrol (configure)
 
     su someUser
     echo "exec startkde" > ~/.xinitrc
+
+# Post-Installation: Apply dotfiles
+## Apply dotfiles
+
+    sudo pacman -S git
+    git clone https://github.com/Mr-SD/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
+    ./arch-install
+    sudo ./arch-install
 
 # Sources
 - https://wiki.archlinux.org/index.php/installation_guide

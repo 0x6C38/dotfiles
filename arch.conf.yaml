@@ -14,7 +14,7 @@
   - [sudo pacman -S pacaur        --needed --noconfirm, Making sure pacaur is installed]
   - [sudo pacman -S numlockx      --needed --noconfirm, Making sure numlockx is installed]
   - [sudo pacman -S ntfs-3g       --needed --noconfirm, Making sure ntfs-3g is installed]
-  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed] # sudo os-prober && grub-mkconfig -o /boot/grub/grub.cfg
+  - [sudo pacman -S os-prober     --needed --noconfirm, Making sure os-prober is installed]  # sudo mkdir -p /media/OtherDrive && sudo mount /dev/sdb1 /media/OtherDrive && sudo os-prober && sudo grub-mkconfig -o /boot/grub/grub.cfg
     
   - [sudo pacman -S reflector     --needed --noconfirm, Making sure reflector (a utility for refreshing arch mirrors) is installed]
 
