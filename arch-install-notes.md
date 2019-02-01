@@ -161,7 +161,7 @@ And the second is the display manager's activation. In case of X.org, numpadx ca
 Reference:
  - https://wiki.archlinux.org/index.php/Activating_Numlock_on_Bootup
 
-## Post-Install: UI
+# Post-Installation: Sound & Graphics
 sudo pacman -S ntp dbus avahi cups
 systemctl enable ntpd
 systemctl enable avahi-daemon
@@ -181,31 +181,37 @@ pavucontrol (configure)
 ## Xorg Setup
 
     pacman -S xorg-server xorg-xinit xorg-apps # (xorg-apps replaces xorg-server-utils and xorg-utils)
+    # not necessary:
+    # pacman -S xorg-twm xorg-xclock xterm
+    # pacman xorg-drivers
 
-### Install apps
-pacman -S xorg-twm xorg-xclock xterm dmenu i3status i3blocks
+### i3WM
+#### Install i3 itself
 
-### Install drivers
-pacman xorg-drivers
+    yaourt -S i3-gaps
+    # sudo pacman -S i3
 
-### Install i3 itself
-yaourt -S i3-gaps
+#### Install basic i3 utils
+    pacman -S dmenu i3status i3blocks
 
-### Configure xorg to use i3
-su leuser
-cd
-nano .xinitrc
-"exec i3"
+#### Configure Xorg to start i3
+    su someUser
+    echo "exec i3" > ~/.xinitrc
 
-### Install i3
-sudo pacman -S i3
+#### Start i3
+    startx
+    # configure i3 to open a different terminal
 
-### Start i3
-exit
-exit
-login non admin
-startx
-configure i3 to open a different terminal
+### KDE
+#### Install KDE itself:
+
+    pacman -S plasma-desktop
+    # pacman -S sddm ?
+
+#### Configure Xorg to start KDE
+
+    su someUser
+    echo "exec startkde" > ~/.xinitrc
 
 # Sources
 - https://wiki.archlinux.org/index.php/installation_guide
