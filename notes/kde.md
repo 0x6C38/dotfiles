@@ -61,3 +61,16 @@ First make sure the panel is unlocked:
 With the panel unlocked:
 
     Right click panel -> "Alternatives" -> Icons only Task Manager
+
+## Menu Transparency
+
+    System Settings -> Application Style -> Widget Style -> Applications -> Widget Style -> Configure.. -> Transparency -> Drag Slider
+
+## Shortcuts
+### Close Window
+    
+    System Settings -> Shortcuts -> Global Shortcuts -> KWin -> Close Window
+
+### Maximize Window
+    
+    System Settings -> Shortcuts -> Global Shortcuts -> KWin -> Maximize Window
