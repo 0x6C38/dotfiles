@@ -124,8 +124,9 @@ Reference:
     Include = /etc/pacman.d/mirrorlist
     SigLevel = PackageRequired TrustedOnly
 
-### Enable yaourt
-#### Edit package manager file
+### Add an AUR helper
+#### Pacaur (depreciated)
+##### Edit package manager file
 
     nano /etc/pacman.conf # add fr packages source which includes yaourt
 
@@ -133,14 +134,22 @@ Reference:
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch
 
-#### Sync changes
+##### Sync changes
     
     sudo pacman -Sy
 
-#### Install and sync yaourt itself
+##### Install and sync yaourt itself
 
-    sudo pacman -Syu yaourt
-    yaourt -Syu
+    sudo pacman -Syu pacaur
+    pacaur -Syu
+
+#### Yay
+
+    sudo pacman -S go --needed --noconfirm
+    git clone https://aur.archlinux.org/yay.git ~/yay
+    cd ~/yay
+    makepkg -si
+
 
 ## Set numlock on boot
 There are two components to having the numpad activated on boot. The first is the console activation which can be done by:
@@ -219,7 +228,7 @@ hwclock
 # Post-Installation: Apply dotfiles
 ## Apply dotfiles
 
-    sudo pacman -S git
+    sudo pacman -S git python --needed --noconfirm
     git clone https://github.com/Mr-SD/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     ./arch-install
