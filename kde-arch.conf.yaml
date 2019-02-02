@@ -213,7 +213,8 @@
 
     # VS Code
     # Extensions can be listed via code --list-extensions and installed via code --install-extension {ext1}. Maybe manage extensions here in the future.
-  - [yay -S visual-studio-code-bin --needed --noconfirm, Making sure visual studio code is installed from the AUR with shortcut name code.]
+  - [sudo pacman -S code --needed --noconfirm, Making sure visual studio code (open source version) is installed.]
+    #- [yay -S visual-studio-code-bin --needed --noconfirm, Making sure visual studio code (closed source version) is installed from the AUR with shortcut name code.]
     
     # Extensions
   - [code --install-extension thekalinga.bootstrap4-vscode, Making sure vscode bootstrap4 extension is installed.]
