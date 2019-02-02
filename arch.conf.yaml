@@ -171,7 +171,7 @@
 
     # Flatpak
   - [sudo pacman -S flatpak       --needed --noconfirm, Making sure flatpak is installed]
-  - [flatpak install flathub com.discordapp.Discord,    Making sure discord is installed from flatpak]
+  - [flatpak install flathub com.discordapp.Discord -y,    Making sure discord is installed from flatpak]
 
 
     # Development related
