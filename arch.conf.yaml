@@ -68,7 +68,8 @@
   - [sudo pacman -S rsync         --needed --noconfirm, Making sure rsync is installed]
   - [sudo pacman -S fzf           --needed --noconfirm, Making sure fuzzy finder is installed]
 
-  - [yay      -S dtrx          --needed --noconfirm, Making sure dtrx (archive extraction utility is installed from the AUR.]
+  - [yay      -S dtrx          --needed --noconfirm, Making sure dtrx (archive extraction utility is installed from the AUR (apparently needs extraction utils installed).]
+  - [sudo pacman -S unzip         --needed --noconfirm, Making sure unzip is installed so that dtrx can use it.]    
 
     # Git related
   - [./concat-gitignore.sh                                       , Making sure global gitignore is up to date.]
