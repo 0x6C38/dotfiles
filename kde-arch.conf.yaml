@@ -200,6 +200,8 @@
     # Haskell
   - [sudo pacman -S stack         --needed --noconfirm, Making sure (haskell) stack is installed]
   - [sudo pacman -S ghc          --needed --noconfirm, Making sure the haskell compiller is installed]
+    #- [yay -S haskell-ide-engine-git --needed --noconfirm, Making sure the haskell ide engine is installed (takes forever)]
+    #- [code --install-extension alanz.vscode-hie-server, Making sure the haskell ide engine plugin for vs code is installed.]
 
     # Utils
   - [yay      -S postman       --needed --noconfirm, Making sure postman is installed]
