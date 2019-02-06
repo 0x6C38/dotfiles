@@ -33,6 +33,7 @@
 
     # Shell/Zsh related
   - [sudo pacman -S zsh           --needed --noconfirm, Making sure zsh is installed]
+    #- [chsh -s `which zsh`,                               Setting shell to zsh.]
     #
     ## oh-my-zsh: Method 1
     ## This is problematic on arch for some reason
