@@ -74,3 +74,7 @@ With the panel unlocked:
 ### Maximize Window
     
     System Settings -> Shortcuts -> Global Shortcuts -> KWin -> Maximize Window
+
+### Switch Desktop
+
+    System Settings -> Shortcuts -> Global Shortcuts -> KWin -> Switch One Desktop [X]
