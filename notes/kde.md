@@ -78,3 +78,8 @@ With the panel unlocked:
 ### Switch Desktop
 
     System Settings -> Shortcuts -> Global Shortcuts -> KWin -> Switch One Desktop [X]
+
+
+## Wallpaper Slideshow
+
+    Right Click Desktop -> Configure Desktop -> Wallpaper Type -> SlideShow -> Add Folder
