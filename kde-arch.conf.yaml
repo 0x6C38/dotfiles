@@ -286,6 +286,10 @@
     #- [sudo pacman -S transmission-cli       --needed --noconfirm, Making sure transmission is installed]
     #- [sudo pip3 install --upgrade torrench                   , Making sure torrench is is installed]
 
+
+    # KDE
+  - [sudo pacman -S dolphin       --needed --noconfirm, Making sure dolphin is installed when using kde.]
+
    
 
 - link:
