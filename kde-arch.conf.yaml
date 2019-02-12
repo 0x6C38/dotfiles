@@ -179,7 +179,7 @@
     # Scala/Java
   - [sudo pacman -S scala         --needed --noconfirm, Making sure scala is installed]
   - [sudo pacman -S sbt           --needed --noconfirm, Making sure sbt is installed]
-  - [sudo pacman -S jdk11-openjdk  --needed --noconfirm, Making sure openjdk is installed]
+      #- [sudo pacman -S jdk11-openjdk  --needed --noconfirm, Making sure openjdk is installed]
   - [sudo pacman -S jdk8-openjdk  --needed --noconfirm, Making sure openjdk8 is installed for spark compatibility]
 
     # Python

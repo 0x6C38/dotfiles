@@ -28,3 +28,7 @@ The sbt version set in `/project/build.properties` must match the sbt version in
 The shortcut for commenting stuff doesn't work if you aren't using a keyboard with an english layout so it must be reassigned in order to work:
 
     File -> Settings Keymap -> Search "Comment With Line Comment" -> Ctr+3 -> Remove other assignments
+
+
+### UTF-8 Output
+Pass the `-Dfile.encoding=UTF-8` as a VM parameter to display `utf-8` output in the console.
