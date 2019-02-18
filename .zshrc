@@ -115,6 +115,8 @@ alias -g sxiv='sxiv -s f'
 alias j='jump'
 alias qre="xsel --clipboard --output | qrencode -s 30 -o ~/Pictures/tmpqr.png && feh ~/Pictures/tmpqr.png"
 
+export LESSCHARSET=utf-8
+
 # Fuzzy finder
 if [ -n "${commands[fzf-share]}" ]; then
   source "$(fzf-share)/completion.zsh"
