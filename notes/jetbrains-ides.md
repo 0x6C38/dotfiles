@@ -29,6 +29,9 @@ The shortcut for commenting stuff doesn't work if you aren't using a keyboard wi
 
     File -> Settings Keymap -> Search "Comment With Line Comment" -> Ctr+3 -> Remove other assignments
 
+### Format Document
+
+    File -> Settings Keymap -> Search "format" -> Ctr+Shift+F -> Remove other assignments
 
 ### UTF-8 Output
 Pass the `-Dfile.encoding=UTF-8` as a VM parameter to display `utf-8` output in the console.
