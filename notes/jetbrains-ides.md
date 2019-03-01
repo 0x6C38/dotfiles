@@ -33,5 +33,11 @@ The shortcut for commenting stuff doesn't work if you aren't using a keyboard wi
 
     File -> Settings Keymap -> Search "format" -> Ctr+Shift+F -> Remove other assignments
 
+### Tab Shortcuts
+
+    File -> Settings Keymap -> Search "tab" -> "Select Next/Previous Tab" -> Ctr+Page Up / Ctr+Page Down -> Remove other assignments
+
+    File -> Settings Keymap -> Search "Close Others" -> Alt+W -> Remove other assignments
+
 ### UTF-8 Output
 Pass the `-Dfile.encoding=UTF-8` as a VM parameter to display `utf-8` output in the console.
