@@ -71,6 +71,8 @@
   - [yay         -S dtrx          --needed --noconfirm, Making sure dtrx (archive extraction utility is installed from the AUR (apparently needs extraction utils installed).]
   - [sudo pacman -S unzip         --needed --noconfirm, Making sure unzip is installed so that dtrx can use it.]
 
+  - [sudo pacman -S kcolorchooser --needed --noconfirm, Making sure kcolorchooser (color picker utility) is installed.]
+
     # Git related
   - [./concat-gitignore.sh                                       , Making sure global gitignore is up to date.]
     #- [git config --global core.excludesfile ~/.gitignore_global, Making sure git is configured to use the global gitignore file.]
