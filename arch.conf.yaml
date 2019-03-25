@@ -89,6 +89,10 @@
     #- [yay      -S discord       --needed --noconfirm, Making sure discord is installed from the AUR.]
 
     # Read/Write/Related
+    # Document converter
+  - [sudo pacman -S pandoc                --needed --noconfirm, Making sure pandoc (doc, md, pdf converter is installed]
+  - [sudo pacman -S texlive-core          --needed --noconfirm, Making sure TeXLive-Core is installed (so that pandoc can convert to pdf)]
+
     # Readers
   - [sudo pacman -S evince                --needed --noconfirm, Making sure evince pdf/general reader is installed]
     #- [sudo pacman -S phonon-qt5-gstreamer  --needed --noconfirm, Making sure phonon gstreamer (okular dependency) is installed]
