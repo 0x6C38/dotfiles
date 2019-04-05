@@ -59,6 +59,7 @@
 
     # General
   - [sudo pacman -S git           --needed --noconfirm, Making sure git is installed]
+  - [sudo pacman -S tree          --needed --noconfirm, Making sure tree is installed]
   - [sudo pacman -S htop          --needed --noconfirm, Making sure htop is installed]
   - [sudo pacman -S vim           --needed --noconfirm, Making sure vim is installed]
     #- [yay   -S gtop          --needed --noconfirm, Making sure gtop is installed]
