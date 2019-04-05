@@ -196,7 +196,7 @@
     # Nodejs
   - [sudo pacman -S nodejs        --needed --noconfirm, Making sure nodejs is installed]
   - [sudo pacman -S npm           --needed --noconfirm, Making sure node package manager is installed]
-  - [yay      -S nvm           --needed --noconfirm, Making sure node version manager is installed from the AUR.]
+  - [yay         -S nvm           --needed --noconfirm, Making sure node version manager is installed from the AUR.]
     #- [curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash, Installing nvm via curl in case AUR package doesn't work. Requires restart after installation.]
   - [nvm install node, Making sure node is installed from the node version manager.]
   - [npm install serverless -g, Making sure serverless framework is globally installed from through npm.]
@@ -204,15 +204,18 @@
     # Golang
   - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
     
+    # Rust
+  - [sudo pacman -S rust          --needed --noconfirm, Making sure rust is installed]
+
     # Haskell
   - [sudo pacman -S stack         --needed --noconfirm, Making sure (haskell) stack is installed]
-  - [sudo pacman -S ghc          --needed --noconfirm, Making sure the haskell compiller is installed]
+  - [sudo pacman -S ghc           --needed --noconfirm, Making sure the haskell compiller is installed]
         #- [yay -S haskell-ide-engine-git --needed --noconfirm, Making sure the haskell ide engine is installed (takes forever)]
         #- [code --install-extension alanz.vscode-hie-server, Making sure the haskell ide engine plugin for vs code is installed.]
 
 
     # Utils
-  - [yay      -S postman       --needed --noconfirm, Making sure postman is installed]
+  - [yay         -S postman       --needed --noconfirm, Making sure postman is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
 
     # IDEs & Editors
