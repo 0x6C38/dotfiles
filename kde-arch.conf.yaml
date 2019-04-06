@@ -318,6 +318,7 @@
     /etc/X11/xorg.conf.d/00-keyboard.conf: 00-keyboard.conf
     #~/.config/compton.conf: compton.conf
     #~/.i3/config: config
+    ~/.cargo/config: cargo-config.toml
     ~/.config/chromium-flags.conf: chromium-flags.conf
     #/media/MD/Downloads/Torrents/torrench/config.ini: config.ini
     /etc/environment: environment
