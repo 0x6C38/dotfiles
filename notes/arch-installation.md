@@ -64,12 +64,19 @@
     reboot
 
 # Post-Installation: Basic Config
+## Set host name for the computer
+
+    echo whatever > /etc/hostname
+
 ## Set persistent network configuration
 
     systemctl enable dhcpcd
-## Set host name for the computer
 
-    echo nombreMaquina > /etc/hostname
+## Refresh mirrors
+In order to have faster download speeds, refresh the mirrors, rank and sort them:
+
+    sudo pacman -S reflector --needed --noconfirm # Download reflector, a utility to rank and sort mirrors
+    sudo reflector --latest 200 --protocol https --sort rate --verbose --save /etc/pacman.d/mirrorlist
 
 ## Configure sudo access
 ### Install sudo itself
@@ -229,7 +236,7 @@ hwclock
 ## Apply dotfiles
 
     sudo pacman -S git python --needed --noconfirm
-    git clone https://github.com/Mr-SD/dotfiles.git ~/dotfiles
+    git clone https://github.com/0x6C38/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     ./arch-install
     sudo ./arch-install
