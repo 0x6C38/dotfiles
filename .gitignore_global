@@ -180,6 +180,7 @@ _ReSharper*/
 # RIA/Silverlight projects
 [Rr]elease/
 *.[Rr]e[Ss]harper
+**/*.rs.bktarget
 *.rsp
 # Runtime data
 # Sample format subprojectDir/obj or subprojectDir/bin
@@ -197,7 +198,7 @@ sql/
 src_managed/
 [Ss]tyle[Cc]op.*
 *.suo
-target
+/target
 target/
 _TeamCity*
 # TeamCity is a build add-in
