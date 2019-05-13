@@ -191,6 +191,7 @@
     # Python
   - [sudo pacman -S python        --needed --noconfirm, Making sure python is installed]
   - [sudo pacman -S python-pip    --needed --noconfirm, Making sure pip3 is installed]
+  - [sudo pacman -S python-pipenv --needed --noconfirm, Making sure pipenv is installed]
 
   - [sudo pip install awscli      , Making sure the aws cli installed using pip]
 
