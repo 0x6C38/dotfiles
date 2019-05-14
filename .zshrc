@@ -7,6 +7,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export AIRFLOW_HOME=~/airflow
+
+
 # Path to your oh-my-zsh installation.
   export ZSH=/usr/share/oh-my-zsh
 #  source "$HOME/.cache/wal/colors.sh" # Exports wal colors, comment if not used
