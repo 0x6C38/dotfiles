@@ -217,7 +217,7 @@
     #- [code --install-extension alanz.vscode-hie-server, Making sure the haskell ide engine plugin for vs code is installed.]
 
     # Utils
-  - [yay         -S postman       --needed --noconfirm, Making sure postman is installed]
+  - [yay         -S postman-bin   --needed --noconfirm, Making sure postman is installed]
   - [sudo pacman -S openssh       --needed --noconfirm, Making sure openssh is installed]
 
     # IDEs & Editors
