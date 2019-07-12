@@ -246,6 +246,7 @@
   - [code --install-extension alefragnani.project-manager, Making sure vscode project management extension is installed.]
   - [code --install-extension christian-kohler.path-intellisense, Making sure vscode path intellisense extension is installed.]
   - [code --install-extension dbaeumer.vscode-eslint, Making sure vsccode ESLint extension is installed.]
+  - [code --install-extension wix.vscode-import-cost, Making sure vscode import-cost extension is installed.]
   - [npm install -g eslint, Making sure ESLint is installed as a npm global dependency as well.]
 
 
