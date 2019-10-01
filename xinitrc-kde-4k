@@ -1,0 +1,2 @@
+xrandr --dpi 157 &
+numlockx & exec startkde
