@@ -208,7 +208,9 @@
   - [sudo pacman -S go            --needed --noconfirm, Making sure go (lang) is installed]
 
     # Rust
-  - [sudo pacman -S rust          --needed --noconfirm, Making sure rust is installed]
+    #  - [sudo pacman -S rust          --needed --noconfirm, Making sure rust is installed]
+  - [sudo pacman -S rustup        --needed --noconfirm, Making sure rustup (rust toolchanin manager) is installed]
+  - [rustup default stable,       Installing and using the default rust toolchain available]
 
     # Haskell
   - [sudo pacman -S stack         --needed --noconfirm, Making sure (haskell) stack is installed]
@@ -247,6 +249,7 @@
   - [code --install-extension christian-kohler.path-intellisense, Making sure vscode path intellisense extension is installed.]
   - [code --install-extension dbaeumer.vscode-eslint, Making sure vsccode ESLint extension is installed.]
   - [code --install-extension wix.vscode-import-cost, Making sure vscode import-cost extension is installed.]
+  - [code --install-extension rust-lang.rust, Making sure vscode rust extension is installed.]
   - [npm install -g eslint, Making sure ESLint is installed as a npm global dependency as well.]
 
 
