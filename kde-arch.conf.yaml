@@ -250,6 +250,8 @@
   - [code --install-extension dbaeumer.vscode-eslint, Making sure vsccode ESLint extension is installed.]
   - [code --install-extension wix.vscode-import-cost, Making sure vscode import-cost extension is installed.]
   - [code --install-extension rust-lang.rust, Making sure vscode rust extension is installed.]
+  - [code --install-extension serayuzgur.crates, Making sure vscode crates extension for better working with rust is installed.]
+  - [code --install-extension bungcip.better-toml, Making sure vscode better-toml extension for better working with rust is installed.]
   - [npm install -g eslint, Making sure ESLint is installed as a npm global dependency as well.]
 
 
