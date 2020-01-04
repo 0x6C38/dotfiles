@@ -67,7 +67,7 @@ ZSH_THEME="wedisagree"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cp jump globalias)
+plugins=(git cp jump globalias cargo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -167,3 +167,7 @@ npm() {
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 ([[ -f /home/ds/.nvm/versions/node/v9.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/ds/.nvm/versions/node/v9.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh &)
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/ds/Development/Rust/Tests/rust-http-serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/ds/Development/Rust/Tests/rust-http-serverless/node_modules/tabtab/.completions/slss.zsh
