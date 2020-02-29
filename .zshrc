@@ -171,3 +171,6 @@ npm() {
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /home/ds/Development/Rust/Tests/rust-http-serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/ds/Development/Rust/Tests/rust-http-serverless/node_modules/tabtab/.completions/slss.zsh
+
+# dotnet
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
