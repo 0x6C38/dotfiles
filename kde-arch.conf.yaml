@@ -222,6 +222,7 @@
     # DotNet
     #- [sudo pacman -S dotnet-sdk     --needed --noconfirm, Making sure dotnet sdk is installed]
     #- [sudo pacman -S aspnet-runtime --needed --noconfirm, Making sure the asp runtime is installed in order to run dotnet webapps]
+    #- [code --install-extension ms-dotnettools.csharp, Making sure dotnet extension for vscode is installed.]
 
     # Utils
   - [yay         -S postman-bin   --needed --noconfirm, Making sure postman is installed]
